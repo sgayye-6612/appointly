@@ -3,7 +3,7 @@
 **Book anything. Run everything.**
 Appointly is a multi-industry appointment booking platform. Customers find and book services in seconds. Businesses manage every appointment, from every channel, in one place. **Capi** 🦫🍊, a friendly capybara assistant, helps both sides.
 
-🔗 **Live demo:** https://YOUR-USERNAME.github.io/appointly/
+🔗 **Live demo:** https://sgayye-6612.github.io/appointly/
 
 ![Appointly home](screenshots/home.png)
 
