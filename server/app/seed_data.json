@@ -1,0 +1,5902 @@
+{
+ "_about": "Demo data for Appointly. Loaded into the database the first time the server starts (see app/seed.py). Timestamps are shifted to today on load.",
+ "exportedAt": 1794637056648,
+ "today": 1794614400000,
+ "businesses": [
+  {
+   "id": "citycareclinic",
+   "bid": "APX-B-001",
+   "name": "CityCare Clinic",
+   "cat": "health",
+   "sub": "hospitals",
+   "ind": "Hospital",
+   "area": "Banjara Hills",
+   "city": "Hyderabad",
+   "address": "Road No. 12, Banjara Hills, Hyderabad",
+   "phone": "+91 40 4137 1271",
+   "email": "demo.hospitals@appointly.demo",
+   "website": "www.citycareclinic.in",
+   "rating": 4.5,
+   "reviews": 217,
+   "open": 480,
+   "close": 1260,
+   "sun": [
+    480,
+    1260
+   ],
+   "cancelHrs": 4,
+   "since": 2009,
+   "bot": "Capi",
+   "branches": [
+    "Banjara Hills"
+   ],
+   "about": "A multispeciality clinic with an in-house lab and pharmacy. For emergencies, call 108 or go to the nearest emergency department.",
+   "amen": [
+    [
+     "car",
+     "Parking"
+    ],
+    [
+     "access",
+     "Wheelchair access"
+    ],
+    [
+     "card",
+     "UPI & cards"
+    ],
+    [
+     "shield",
+     "Hygiene certified"
+    ],
+    [
+     "wifi",
+     "Free Wi-Fi"
+    ],
+    [
+     "users",
+     "Family friendly"
+    ]
+   ],
+   "insurance": [
+    "Star Health",
+    "Care Health",
+    "Niva Bupa"
+   ],
+   "faqs": [
+    [
+     "How do I reschedule?",
+     "Use the link in your WhatsApp confirmation, or ask Capi in the chat."
+    ]
+   ],
+   "owner": "Dr. Vikram Shah",
+   "staff": [
+    {
+     "id": "citycareclinics0",
+     "name": "Dr. Vikram Shah",
+     "role": "General physician",
+     "qual": "MBBS, MD",
+     "exp": 18,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Vikram"
+    },
+    {
+     "id": "citycareclinics1",
+     "name": "Dr. Lata Pillai",
+     "role": "Pediatrician",
+     "qual": "MBBS, DCH",
+     "exp": 15,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Lata"
+    },
+    {
+     "id": "citycareclinics2",
+     "name": "Dr. Omar Siddiqui",
+     "role": "Cardiologist",
+     "qual": "MD, DM (Cardio)",
+     "exp": 12,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Omar"
+    }
+   ],
+   "services": [
+    {
+     "id": "citycareclinicv0",
+     "g": "Consultations",
+     "name": "General consultation",
+     "dur": 15,
+     "price": 700,
+     "desc": "For fever, cold and everyday concerns.",
+     "kw": [
+      "general",
+      "consultation",
+      "hospitals",
+      "clinics",
+      "doctor",
+      "fever",
+      "general",
+      "hospital",
+      "clinic"
+     ],
+     "staff": null
+    },
+    {
+     "id": "citycareclinicv1",
+     "g": "Consultations",
+     "name": "Child consultation",
+     "dur": 20,
+     "price": 800,
+     "desc": "For children up to 16.",
+     "kw": [
+      "child",
+      "consultation",
+      "hospitals",
+      "clinics",
+      "doctor",
+      "fever",
+      "general",
+      "hospital",
+      "clinic"
+     ],
+     "staff": null
+    },
+    {
+     "id": "citycareclinicv2",
+     "g": "Consultations",
+     "name": "Cardiology consultation",
+     "dur": 20,
+     "price": 1200,
+     "desc": "Includes ECG review.",
+     "kw": [
+      "cardiology",
+      "consultation",
+      "hospitals",
+      "clinics",
+      "doctor",
+      "fever",
+      "general",
+      "hospital",
+      "clinic"
+     ],
+     "staff": null
+    },
+    {
+     "id": "citycareclinicv3",
+     "g": "Health checks",
+     "name": "Basic health check",
+     "dur": 120,
+     "price": 2999,
+     "desc": "Blood tests, ECG, X-ray and doctor review.",
+     "kw": [
+      "basic",
+      "health",
+      "check",
+      "hospitals",
+      "clinics",
+      "doctor",
+      "fever",
+      "general",
+      "hospital",
+      "clinic"
+     ],
+     "staff": null
+    }
+   ],
+   "offers": [],
+   "breaks": [],
+   "holidays": [],
+   "slotInt": 30,
+   "buffer": 0,
+   "dailyLimit": 40,
+   "autoConfirm": true,
+   "status": "active",
+   "verified": true,
+   "demo": true,
+   "plan": "Growth",
+   "q": {},
+   "login_email": "demo.hospitals@appointly.demo"
+  },
+  {
+   "id": "smilecaredental",
+   "bid": "APX-B-002",
+   "name": "SmileCare Dental",
+   "cat": "health",
+   "sub": "dental",
+   "ind": "Dental clinic",
+   "area": "Kondapur",
+   "city": "Hyderabad",
+   "address": "Botanical Garden Road, Kondapur, Hyderabad",
+   "phone": "+91 40 4174 1542",
+   "email": "demo.dental@appointly.demo",
+   "website": "www.smilecaredental.in",
+   "rating": 4.6,
+   "reviews": 314,
+   "open": 540,
+   "close": 1140,
+   "sun": [
+    600,
+    840
+   ],
+   "cancelHrs": 6,
+   "since": 2010,
+   "bot": "Capi",
+   "branches": [
+    "Kondapur"
+   ],
+   "about": "A six-chair dental clinic with digital X-ray and a kids’ room. Every patient gets a written plan with costs before treatment starts.",
+   "amen": [
+    [
+     "car",
+     "Parking"
+    ],
+    [
+     "access",
+     "Wheelchair access"
+    ],
+    [
+     "card",
+     "UPI & cards"
+    ],
+    [
+     "shield",
+     "Hygiene certified"
+    ],
+    [
+     "wifi",
+     "Free Wi-Fi"
+    ],
+    [
+     "users",
+     "Family friendly"
+    ]
+   ],
+   "insurance": [
+    "Star Health",
+    "HDFC Ergo",
+    "ICICI Lombard"
+   ],
+   "faqs": [
+    [
+     "How do I reschedule?",
+     "Use the link in your WhatsApp confirmation, or ask Capi in the chat."
+    ]
+   ],
+   "owner": "Dr. Meera Iyer",
+   "staff": [
+    {
+     "id": "smilecaredentals0",
+     "name": "Dr. Meera Iyer",
+     "role": "General dentist",
+     "qual": "BDS, MDS",
+     "exp": 14,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Meera"
+    },
+    {
+     "id": "smilecaredentals1",
+     "name": "Dr. Arjun Menon",
+     "role": "Endodontist",
+     "qual": "BDS, MDS (Endo)",
+     "exp": 11,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Arjun"
+    },
+    {
+     "id": "smilecaredentals2",
+     "name": "Dr. Farah Khan",
+     "role": "Orthodontist",
+     "qual": "BDS, MDS (Ortho)",
+     "exp": 9,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Farah"
+    },
+    {
+     "id": "smilecaredentals3",
+     "name": "Ravi Kumar",
+     "role": "Dental hygienist",
+     "qual": "Dip. Dental Hygiene",
+     "exp": 7,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Ravi"
+    }
+   ],
+   "services": [
+    {
+     "id": "smilecaredentalv0",
+     "g": "General",
+     "name": "Consultation",
+     "dur": 20,
+     "price": 500,
+     "desc": "Exam, photos and a written plan.",
+     "kw": [
+      "consultation",
+      "dental",
+      "clinics",
+      "dentist",
+      "teeth",
+      "tooth"
+     ],
+     "staff": null
+    },
+    {
+     "id": "smilecaredentalv1",
+     "g": "General",
+     "name": "Cleaning & polish",
+     "dur": 45,
+     "price": 1200,
+     "desc": "Scaling, polishing and fluoride.",
+     "kw": [
+      "cleaning",
+      "polish",
+      "dental",
+      "clinics",
+      "dentist",
+      "teeth",
+      "tooth"
+     ],
+     "staff": null
+    },
+    {
+     "id": "smilecaredentalv2",
+     "g": "Restorative",
+     "name": "Tooth filling",
+     "dur": 45,
+     "price": 1800,
+     "desc": "Tooth-coloured filling.",
+     "kw": [
+      "tooth",
+      "filling",
+      "dental",
+      "clinics",
+      "dentist",
+      "teeth",
+      "tooth"
+     ],
+     "staff": null
+    },
+    {
+     "id": "smilecaredentalv3",
+     "g": "Restorative",
+     "name": "Root canal",
+     "dur": 90,
+     "price": 6500,
+     "desc": "Single-sitting where possible.",
+     "kw": [
+      "root",
+      "canal",
+      "dental",
+      "clinics",
+      "dentist",
+      "teeth",
+      "tooth"
+     ],
+     "staff": null
+    },
+    {
+     "id": "smilecaredentalv4",
+     "g": "Cosmetic",
+     "name": "Teeth whitening",
+     "dur": 60,
+     "price": 8000,
+     "desc": "In-clinic whitening.",
+     "kw": [
+      "teeth",
+      "whitening",
+      "dental",
+      "clinics",
+      "dentist",
+      "teeth",
+      "tooth"
+     ],
+     "staff": null
+    },
+    {
+     "id": "smilecaredentalv5",
+     "g": "Orthodontics",
+     "name": "Braces consultation",
+     "dur": 30,
+     "price": 800,
+     "desc": "Braces or aligner options.",
+     "kw": [
+      "braces",
+      "consultation",
+      "dental",
+      "clinics",
+      "dentist",
+      "teeth",
+      "tooth"
+     ],
+     "staff": null
+    }
+   ],
+   "offers": [
+    {
+     "id": "smilecaredentalo0",
+     "title": "20% off teeth whitening",
+     "desc": "Book any whitening slot this month.",
+     "pct": 20,
+     "svc": "smilecaredentalv4",
+     "ends": 20,
+     "active": true
+    }
+   ],
+   "breaks": [
+    [
+     780,
+     840
+    ]
+   ],
+   "holidays": [],
+   "slotInt": 30,
+   "buffer": 0,
+   "dailyLimit": 40,
+   "autoConfirm": true,
+   "status": "active",
+   "verified": true,
+   "demo": true,
+   "plan": "Scale",
+   "q": {},
+   "login_email": "demo.dental@appointly.demo"
+  },
+  {
+   "id": "skinglowclinic",
+   "bid": "APX-B-003",
+   "name": "SkinGlow Clinic",
+   "cat": "health",
+   "sub": "derma",
+   "ind": "Hospital",
+   "area": "Jubilee Hills",
+   "city": "Hyderabad",
+   "address": "Road No. 36, Jubilee Hills, Hyderabad",
+   "phone": "+91 40 4211 1813",
+   "email": "demo.derma@appointly.demo",
+   "website": "www.skinglowclinic.in",
+   "rating": 4.7,
+   "reviews": 411,
+   "open": 600,
+   "close": 1200,
+   "sun": [
+    600,
+    840
+   ],
+   "cancelHrs": 6,
+   "since": 2011,
+   "bot": "Capi",
+   "branches": [
+    "Jubilee Hills"
+   ],
+   "about": "Dermatologists for acne, pigmentation, hair loss and skin allergies, with peel and laser treatments.",
+   "amen": [
+    [
+     "car",
+     "Parking"
+    ],
+    [
+     "access",
+     "Wheelchair access"
+    ],
+    [
+     "card",
+     "UPI & cards"
+    ],
+    [
+     "shield",
+     "Hygiene certified"
+    ],
+    [
+     "wifi",
+     "Free Wi-Fi"
+    ],
+    [
+     "users",
+     "Family friendly"
+    ]
+   ],
+   "insurance": [],
+   "faqs": [
+    [
+     "How do I reschedule?",
+     "Use the link in your WhatsApp confirmation, or ask Capi in the chat."
+    ]
+   ],
+   "owner": "Dr. Nandini Rao",
+   "staff": [
+    {
+     "id": "skinglowclinics0",
+     "name": "Dr. Nandini Rao",
+     "role": "Dermatologist",
+     "qual": "MD (Dermatology)",
+     "exp": 13,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Nandini"
+    },
+    {
+     "id": "skinglowclinics1",
+     "name": "Dr. Aamir Qureshi",
+     "role": "Trichologist",
+     "qual": "MD, Fellowship in Hair",
+     "exp": 9,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Aamir"
+    }
+   ],
+   "services": [
+    {
+     "id": "skinglowclinicv0",
+     "g": "Consultations",
+     "name": "Skin consultation",
+     "dur": 20,
+     "price": 800,
+     "desc": "Diagnosis and a treatment plan.",
+     "kw": [
+      "skin",
+      "consultation",
+      "dermatology",
+      "skin",
+      "acne",
+      "hair",
+      "derma",
+      "dermatologist"
+     ],
+     "staff": null
+    },
+    {
+     "id": "skinglowclinicv1",
+     "g": "Consultations",
+     "name": "Hair-loss consultation",
+     "dur": 30,
+     "price": 1000,
+     "desc": "Scalp analysis and a plan.",
+     "kw": [
+      "hair",
+      "loss",
+      "consultation",
+      "dermatology",
+      "skin",
+      "acne",
+      "hair",
+      "derma",
+      "dermatologist"
+     ],
+     "staff": null
+    },
+    {
+     "id": "skinglowclinicv2",
+     "g": "Treatments",
+     "name": "Chemical peel",
+     "dur": 45,
+     "price": 3500,
+     "desc": "For pigmentation and dull skin.",
+     "kw": [
+      "chemical",
+      "peel",
+      "dermatology",
+      "skin",
+      "acne",
+      "hair",
+      "derma",
+      "dermatologist"
+     ],
+     "staff": null
+    },
+    {
+     "id": "skinglowclinicv3",
+     "g": "Treatments",
+     "name": "Laser hair reduction",
+     "dur": 45,
+     "price": 4500,
+     "desc": "Per area, per session.",
+     "kw": [
+      "laser",
+      "hair",
+      "reduction",
+      "dermatology",
+      "skin",
+      "acne",
+      "hair",
+      "derma",
+      "dermatologist"
+     ],
+     "staff": null
+    }
+   ],
+   "offers": [
+    {
+     "id": "skinglowclinico0",
+     "title": "Free consultation with any peel",
+     "desc": "Consultation fee waived when you book a chemical peel.",
+     "pct": 0,
+     "svc": "skinglowclinicv2",
+     "ends": 14,
+     "active": true
+    }
+   ],
+   "breaks": [
+    [
+     780,
+     840
+    ]
+   ],
+   "holidays": [],
+   "slotInt": 30,
+   "buffer": 0,
+   "dailyLimit": 40,
+   "autoConfirm": true,
+   "status": "active",
+   "verified": true,
+   "demo": true,
+   "plan": "Starter",
+   "q": {},
+   "login_email": "demo.derma@appointly.demo"
+  },
+  {
+   "id": "physiopluscentre",
+   "bid": "APX-B-004",
+   "name": "PhysioPlus Centre",
+   "cat": "health",
+   "sub": "physio",
+   "ind": "Spa",
+   "area": "Gachibowli",
+   "city": "Hyderabad",
+   "address": "Financial District Road, Gachibowli, Hyderabad",
+   "phone": "+91 40 4248 2084",
+   "email": "demo.physio@appointly.demo",
+   "website": "www.physiopluscentre.in",
+   "rating": 4.8,
+   "reviews": 508,
+   "open": 420,
+   "close": 1200,
+   "sun": [
+    480,
+    780
+   ],
+   "cancelHrs": 6,
+   "since": 2012,
+   "bot": "Capi",
+   "branches": [
+    "Gachibowli"
+   ],
+   "about": "Physiotherapy for back, neck and sports injuries. Every plan starts with a 1-to-1 assessment.",
+   "amen": [
+    [
+     "car",
+     "Parking"
+    ],
+    [
+     "access",
+     "Wheelchair access"
+    ],
+    [
+     "card",
+     "UPI & cards"
+    ],
+    [
+     "shield",
+     "Hygiene certified"
+    ],
+    [
+     "wifi",
+     "Free Wi-Fi"
+    ],
+    [
+     "users",
+     "Family friendly"
+    ]
+   ],
+   "insurance": [],
+   "faqs": [
+    [
+     "How do I reschedule?",
+     "Use the link in your WhatsApp confirmation, or ask Capi in the chat."
+    ]
+   ],
+   "owner": "Anjali Das",
+   "staff": [
+    {
+     "id": "physiopluscentres0",
+     "name": "Anjali Das",
+     "role": "Physiotherapist",
+     "qual": "MPT (Ortho)",
+     "exp": 9,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Anjali"
+    },
+    {
+     "id": "physiopluscentres1",
+     "name": "Sunil Varma",
+     "role": "Sports physio",
+     "qual": "BPT",
+     "exp": 6,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Sunil"
+    }
+   ],
+   "services": [
+    {
+     "id": "physiopluscentrev0",
+     "g": "Sessions",
+     "name": "Physiotherapy session",
+     "dur": 45,
+     "price": 900,
+     "desc": "Assessment, treatment and home exercises.",
+     "kw": [
+      "physiotherapy",
+      "session",
+      "physiotherapy",
+      "pain",
+      "back",
+      "neck",
+      "knee",
+      "injury",
+      "physio"
+     ],
+     "staff": null
+    },
+    {
+     "id": "physiopluscentrev1",
+     "g": "Programs",
+     "name": "Back & neck pain program",
+     "dur": 60,
+     "price": 1500,
+     "desc": "Posture and strengthening.",
+     "kw": [
+      "back",
+      "neck",
+      "pain",
+      "program",
+      "physiotherapy",
+      "pain",
+      "back",
+      "neck",
+      "knee",
+      "injury",
+      "physio"
+     ],
+     "staff": null
+    },
+    {
+     "id": "physiopluscentrev2",
+     "g": "Programs",
+     "name": "Sports injury rehab",
+     "dur": 45,
+     "price": 1100,
+     "desc": "Return-to-sport plan.",
+     "kw": [
+      "sports",
+      "injury",
+      "rehab",
+      "physiotherapy",
+      "pain",
+      "back",
+      "neck",
+      "knee",
+      "injury",
+      "physio"
+     ],
+     "staff": null
+    },
+    {
+     "id": "physiopluscentrev3",
+     "g": "Sessions",
+     "name": "Home physio visit",
+     "dur": 60,
+     "price": 1400,
+     "desc": "A physio visits you at home.",
+     "kw": [
+      "home",
+      "physio",
+      "visit",
+      "physiotherapy",
+      "pain",
+      "back",
+      "neck",
+      "knee",
+      "injury",
+      "physio"
+     ],
+     "staff": null
+    }
+   ],
+   "offers": [],
+   "breaks": [
+    [
+     780,
+     840
+    ]
+   ],
+   "holidays": [],
+   "slotInt": 30,
+   "buffer": 0,
+   "dailyLimit": 40,
+   "autoConfirm": true,
+   "status": "active",
+   "verified": true,
+   "demo": true,
+   "plan": "Growth",
+   "q": {},
+   "login_email": "demo.physio@appointly.demo"
+  },
+  {
+   "id": "nutrilifestudio",
+   "bid": "APX-B-005",
+   "name": "NutriLife Studio",
+   "cat": "health",
+   "sub": "nutrition",
+   "ind": "Consultant",
+   "area": "Kondapur",
+   "city": "Hyderabad",
+   "address": "Main Road, Kondapur, Hyderabad",
+   "phone": "+91 40 4285 2355",
+   "email": "demo.nutrition@appointly.demo",
+   "website": "www.nutrilifestudio.in",
+   "rating": 4.9,
+   "reviews": 605,
+   "open": 600,
+   "close": 1140,
+   "sun": null,
+   "cancelHrs": 6,
+   "since": 2013,
+   "bot": "Capi",
+   "branches": [
+    "Kondapur"
+   ],
+   "about": "Registered dietitians for diabetes, PCOS, heart health and sports nutrition, with plans built around Indian home food.",
+   "amen": [
+    [
+     "car",
+     "Parking"
+    ],
+    [
+     "access",
+     "Wheelchair access"
+    ],
+    [
+     "card",
+     "UPI & cards"
+    ],
+    [
+     "shield",
+     "Hygiene certified"
+    ],
+    [
+     "wifi",
+     "Free Wi-Fi"
+    ],
+    [
+     "users",
+     "Family friendly"
+    ]
+   ],
+   "insurance": [],
+   "faqs": [
+    [
+     "How do I reschedule?",
+     "Use the link in your WhatsApp confirmation, or ask Capi in the chat."
+    ]
+   ],
+   "owner": "Meghana Reddy",
+   "staff": [
+    {
+     "id": "nutrilifestudios0",
+     "name": "Meghana Reddy",
+     "role": "Clinical dietitian",
+     "qual": "M.Sc Nutrition, RD",
+     "exp": 10,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Meghana"
+    },
+    {
+     "id": "nutrilifestudios1",
+     "name": "Arjun Pillai",
+     "role": "Sports nutritionist",
+     "qual": "ISSN certified",
+     "exp": 6,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Arjun"
+    }
+   ],
+   "services": [
+    {
+     "id": "nutrilifestudiov0",
+     "g": "Consultations",
+     "name": "Diet consultation",
+     "dur": 45,
+     "price": 1200,
+     "desc": "Assessment and a 2-week plan.",
+     "kw": [
+      "diet",
+      "consultation",
+      "nutritionists",
+      "dietitians",
+      "diet",
+      "dietitian",
+      "nutritionist",
+      "food"
+     ],
+     "staff": null
+    },
+    {
+     "id": "nutrilifestudiov1",
+     "g": "Consultations",
+     "name": "Diabetes & PCOS plan",
+     "dur": 45,
+     "price": 1500,
+     "desc": "Built around your reports.",
+     "kw": [
+      "diabetes",
+      "pcos",
+      "plan",
+      "nutritionists",
+      "dietitians",
+      "diet",
+      "dietitian",
+      "nutritionist",
+      "food"
+     ],
+     "staff": null
+    },
+    {
+     "id": "nutrilifestudiov2",
+     "g": "Consultations",
+     "name": "Sports nutrition",
+     "dur": 45,
+     "price": 1500,
+     "desc": "For runners, lifters and athletes.",
+     "kw": [
+      "sports",
+      "nutrition",
+      "nutritionists",
+      "dietitians",
+      "diet",
+      "dietitian",
+      "nutritionist",
+      "food"
+     ],
+     "staff": null
+    },
+    {
+     "id": "nutrilifestudiov3",
+     "g": "Follow-ups",
+     "name": "Follow-up check-in",
+     "dur": 20,
+     "price": 500,
+     "desc": "Review progress and adjust.",
+     "kw": [
+      "follow",
+      "check",
+      "nutritionists",
+      "dietitians",
+      "diet",
+      "dietitian",
+      "nutritionist",
+      "food"
+     ],
+     "staff": null
+    }
+   ],
+   "offers": [
+    {
+     "id": "nutrilifestudioo0",
+     "title": "Free follow-up with first consult",
+     "desc": "Your first follow-up is on us.",
+     "pct": 0,
+     "svc": "nutrilifestudiov0",
+     "ends": 30,
+     "active": true
+    }
+   ],
+   "breaks": [
+    [
+     780,
+     840
+    ]
+   ],
+   "holidays": [],
+   "slotInt": 30,
+   "buffer": 0,
+   "dailyLimit": 40,
+   "autoConfirm": true,
+   "status": "active",
+   "verified": true,
+   "demo": true,
+   "plan": "Scale",
+   "q": {},
+   "login_email": "demo.nutrition@appointly.demo"
+  },
+  {
+   "id": "stylestudiosalon",
+   "bid": "APX-B-006",
+   "name": "StyleStudio Salon",
+   "cat": "beauty",
+   "sub": "salons",
+   "ind": "Salon",
+   "area": "Jubilee Hills",
+   "city": "Hyderabad",
+   "address": "Main Road, Jubilee Hills, Hyderabad",
+   "phone": "+91 40 4322 2626",
+   "email": "demo.salons@appointly.demo",
+   "website": "www.stylestudiosalon.in",
+   "rating": 4.4,
+   "reviews": 702,
+   "open": 600,
+   "close": 1260,
+   "sun": [
+    600,
+    1260
+   ],
+   "cancelHrs": 3,
+   "since": 2014,
+   "bot": "Capi",
+   "branches": [
+    "Jubilee Hills"
+   ],
+   "about": "A full-service hair salon. Colour work includes bond care as standard.",
+   "amen": [
+    [
+     "car",
+     "Parking"
+    ],
+    [
+     "shield",
+     "Single-use tools"
+    ],
+    [
+     "card",
+     "UPI & cards"
+    ],
+    [
+     "heart",
+     "Premium products"
+    ],
+    [
+     "wifi",
+     "Free Wi-Fi"
+    ],
+    [
+     "users",
+     "Women staff available"
+    ]
+   ],
+   "insurance": [],
+   "faqs": [
+    [
+     "How do I reschedule?",
+     "Use the link in your WhatsApp confirmation, or ask Capi in the chat."
+    ]
+   ],
+   "owner": "Neha Kapoor",
+   "staff": [
+    {
+     "id": "stylestudiosalons0",
+     "name": "Neha Kapoor",
+     "role": "Senior stylist",
+     "qual": "Toni & Guy Academy",
+     "exp": 10,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Neha"
+    },
+    {
+     "id": "stylestudiosalons1",
+     "name": "Imran Sheikh",
+     "role": "Colorist",
+     "qual": "L’Oréal certified",
+     "exp": 8,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Imran"
+    }
+   ],
+   "services": [
+    {
+     "id": "stylestudiosalonv0",
+     "g": "Hair",
+     "name": "Haircut & blow-dry",
+     "dur": 45,
+     "price": 900,
+     "desc": "Consult, wash, cut and finish.",
+     "kw": [
+      "haircut",
+      "blow",
+      "dry",
+      "salons",
+      "hair",
+      "haircut",
+      "cut",
+      "salon",
+      "stylist"
+     ],
+     "staff": null
+    },
+    {
+     "id": "stylestudiosalonv1",
+     "g": "Hair",
+     "name": "Global hair color",
+     "dur": 120,
+     "price": 3500,
+     "desc": "Ammonia-free colour.",
+     "kw": [
+      "global",
+      "hair",
+      "color",
+      "salons",
+      "hair",
+      "haircut",
+      "cut",
+      "salon",
+      "stylist"
+     ],
+     "staff": null
+    },
+    {
+     "id": "stylestudiosalonv2",
+     "g": "Hair",
+     "name": "Keratin treatment",
+     "dur": 150,
+     "price": 5500,
+     "desc": "Smooth for 3–4 months.",
+     "kw": [
+      "keratin",
+      "treatment",
+      "salons",
+      "hair",
+      "haircut",
+      "cut",
+      "salon",
+      "stylist"
+     ],
+     "staff": null
+    },
+    {
+     "id": "stylestudiosalonv3",
+     "g": "Care",
+     "name": "Hair spa",
+     "dur": 60,
+     "price": 1500,
+     "desc": "Deep conditioning treatment.",
+     "kw": [
+      "hair",
+      "spa",
+      "salons",
+      "hair",
+      "haircut",
+      "cut",
+      "salon",
+      "stylist"
+     ],
+     "staff": null
+    }
+   ],
+   "offers": [
+    {
+     "id": "stylestudiosalono0",
+     "title": "15% off weekday haircuts",
+     "desc": "Monday to Thursday, before 4 PM.",
+     "pct": 15,
+     "svc": "stylestudiosalonv0",
+     "ends": 10,
+     "active": true
+    }
+   ],
+   "breaks": [
+    [
+     780,
+     840
+    ]
+   ],
+   "holidays": [],
+   "slotInt": 30,
+   "buffer": 0,
+   "dailyLimit": 40,
+   "autoConfirm": true,
+   "status": "active",
+   "verified": true,
+   "demo": true,
+   "plan": "Starter",
+   "q": {},
+   "login_email": "demo.salons@appointly.demo"
+  },
+  {
+   "id": "nailartstudio",
+   "bid": "APX-B-007",
+   "name": "NailArt Studio",
+   "cat": "beauty",
+   "sub": "nails",
+   "ind": "Salon",
+   "area": "Banjara Hills",
+   "city": "Hyderabad",
+   "address": "Main Road, Banjara Hills, Hyderabad",
+   "phone": "+91 40 4359 2897",
+   "email": "demo.nails@appointly.demo",
+   "website": "www.nailartstudio.in",
+   "rating": 4.5,
+   "reviews": 799,
+   "open": 660,
+   "close": 1260,
+   "sun": [
+    660,
+    1200
+   ],
+   "cancelHrs": 3,
+   "since": 2015,
+   "bot": "Capi",
+   "branches": [
+    "Banjara Hills"
+   ],
+   "about": "A nail studio for gel manicures, pedicures, extensions and hand-painted art.",
+   "amen": [
+    [
+     "car",
+     "Parking"
+    ],
+    [
+     "shield",
+     "Single-use tools"
+    ],
+    [
+     "card",
+     "UPI & cards"
+    ],
+    [
+     "heart",
+     "Premium products"
+    ],
+    [
+     "wifi",
+     "Free Wi-Fi"
+    ],
+    [
+     "users",
+     "Women staff available"
+    ]
+   ],
+   "insurance": [],
+   "faqs": [
+    [
+     "How do I reschedule?",
+     "Use the link in your WhatsApp confirmation, or ask Capi in the chat."
+    ]
+   ],
+   "owner": "Divya Rao",
+   "staff": [
+    {
+     "id": "nailartstudios0",
+     "name": "Divya Rao",
+     "role": "Nail artist",
+     "qual": "CND certified",
+     "exp": 5,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Divya"
+    },
+    {
+     "id": "nailartstudios1",
+     "name": "Sana Ali",
+     "role": "Nail technician",
+     "qual": "Certified",
+     "exp": 4,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Sana"
+    }
+   ],
+   "services": [
+    {
+     "id": "nailartstudiov0",
+     "g": "Hands",
+     "name": "Gel manicure",
+     "dur": 40,
+     "price": 700,
+     "desc": "Shape, cuticle care and gel colour.",
+     "kw": [
+      "gel",
+      "manicure",
+      "nail",
+      "studios",
+      "nail",
+      "nails",
+      "manicure",
+      "pedicure"
+     ],
+     "staff": null
+    },
+    {
+     "id": "nailartstudiov1",
+     "g": "Feet",
+     "name": "Gel pedicure",
+     "dur": 50,
+     "price": 900,
+     "desc": "Soak, scrub and gel colour.",
+     "kw": [
+      "gel",
+      "pedicure",
+      "nail",
+      "studios",
+      "nail",
+      "nails",
+      "manicure",
+      "pedicure"
+     ],
+     "staff": null
+    },
+    {
+     "id": "nailartstudiov2",
+     "g": "Extensions",
+     "name": "Nail extensions",
+     "dur": 90,
+     "price": 2200,
+     "desc": "Gel or acrylic extensions.",
+     "kw": [
+      "nail",
+      "extensions",
+      "nail",
+      "studios",
+      "nail",
+      "nails",
+      "manicure",
+      "pedicure"
+     ],
+     "staff": null
+    },
+    {
+     "id": "nailartstudiov3",
+     "g": "Art",
+     "name": "Nail art (per set)",
+     "dur": 30,
+     "price": 600,
+     "desc": "Hand-painted designs.",
+     "kw": [
+      "nail",
+      "art",
+      "per",
+      "set",
+      "nail",
+      "studios",
+      "nail",
+      "nails",
+      "manicure",
+      "pedicure"
+     ],
+     "staff": null
+    }
+   ],
+   "offers": [
+    {
+     "id": "nailartstudioo0",
+     "title": "Mani + pedi combo, save ₹300",
+     "desc": "Book both in one visit.",
+     "pct": 0,
+     "svc": "nailartstudiov1",
+     "ends": 7,
+     "active": true
+    }
+   ],
+   "breaks": [
+    [
+     780,
+     840
+    ]
+   ],
+   "holidays": [],
+   "slotInt": 30,
+   "buffer": 0,
+   "dailyLimit": 40,
+   "autoConfirm": true,
+   "status": "active",
+   "verified": true,
+   "demo": true,
+   "plan": "Growth",
+   "q": {},
+   "login_email": "demo.nails@appointly.demo"
+  },
+  {
+   "id": "glamupmakeup",
+   "bid": "APX-B-008",
+   "name": "GlamUp Makeup",
+   "cat": "beauty",
+   "sub": "makeup",
+   "ind": "Salon",
+   "area": "Madhapur",
+   "city": "Hyderabad",
+   "address": "Main Road, Madhapur, Hyderabad",
+   "phone": "+91 40 4396 3168",
+   "email": "demo.makeup@appointly.demo",
+   "website": "www.glamupmakeup.in",
+   "rating": 4.6,
+   "reviews": 896,
+   "open": 480,
+   "close": 1260,
+   "sun": [
+    480,
+    1260
+   ],
+   "cancelHrs": 24,
+   "since": 2016,
+   "bot": "Capi",
+   "branches": [
+    "Madhapur"
+   ],
+   "about": "Makeup artists for parties, engagements and weddings, at the studio or at your venue.",
+   "amen": [
+    [
+     "car",
+     "Parking"
+    ],
+    [
+     "shield",
+     "Single-use tools"
+    ],
+    [
+     "card",
+     "UPI & cards"
+    ],
+    [
+     "heart",
+     "Premium products"
+    ],
+    [
+     "wifi",
+     "Free Wi-Fi"
+    ],
+    [
+     "users",
+     "Women staff available"
+    ]
+   ],
+   "insurance": [],
+   "faqs": [
+    [
+     "How do I reschedule?",
+     "Use the link in your WhatsApp confirmation, or ask Capi in the chat."
+    ]
+   ],
+   "owner": "Riya Sharma",
+   "staff": [
+    {
+     "id": "glamupmakeups0",
+     "name": "Riya Sharma",
+     "role": "Makeup artist",
+     "qual": "MAC Pro trained",
+     "exp": 8,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Riya"
+    },
+    {
+     "id": "glamupmakeups1",
+     "name": "Pooja Iyer",
+     "role": "Hair & makeup artist",
+     "qual": "Certified",
+     "exp": 6,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Pooja"
+    }
+   ],
+   "services": [
+    {
+     "id": "glamupmakeupv0",
+     "g": "Makeup",
+     "name": "Party makeup",
+     "dur": 60,
+     "price": 3000,
+     "desc": "Full look with lashes.",
+     "kw": [
+      "party",
+      "makeup",
+      "makeup",
+      "artists",
+      "makeup",
+      "bridal",
+      "wedding",
+      "party"
+     ],
+     "staff": null
+    },
+    {
+     "id": "glamupmakeupv1",
+     "g": "Bridal",
+     "name": "Bridal trial",
+     "dur": 90,
+     "price": 4000,
+     "desc": "Hair and makeup trial.",
+     "kw": [
+      "bridal",
+      "trial",
+      "makeup",
+      "artists",
+      "makeup",
+      "bridal",
+      "wedding",
+      "party"
+     ],
+     "staff": null
+    },
+    {
+     "id": "glamupmakeupv2",
+     "g": "Bridal",
+     "name": "Bridal makeup (on the day)",
+     "dur": 180,
+     "price": 15000,
+     "desc": "At the venue or studio.",
+     "kw": [
+      "bridal",
+      "makeup",
+      "the",
+      "day",
+      "makeup",
+      "artists",
+      "makeup",
+      "bridal",
+      "wedding",
+      "party"
+     ],
+     "staff": null
+    },
+    {
+     "id": "glamupmakeupv3",
+     "g": "Styling",
+     "name": "Saree draping",
+     "dur": 20,
+     "price": 800,
+     "desc": "Any style.",
+     "kw": [
+      "saree",
+      "draping",
+      "makeup",
+      "artists",
+      "makeup",
+      "bridal",
+      "wedding",
+      "party"
+     ],
+     "staff": null
+    }
+   ],
+   "offers": [],
+   "breaks": [
+    [
+     780,
+     840
+    ]
+   ],
+   "holidays": [],
+   "slotInt": 30,
+   "buffer": 0,
+   "dailyLimit": 40,
+   "autoConfirm": true,
+   "status": "active",
+   "verified": true,
+   "demo": true,
+   "plan": "Scale",
+   "q": {},
+   "login_email": "demo.makeup@appointly.demo"
+  },
+  {
+   "id": "inkcraftstudio",
+   "bid": "APX-B-009",
+   "name": "InkCraft Studio",
+   "cat": "beauty",
+   "sub": "tattoo",
+   "ind": "Salon",
+   "area": "Banjara Hills",
+   "city": "Hyderabad",
+   "address": "Main Road, Banjara Hills, Hyderabad",
+   "phone": "+91 40 4433 3439",
+   "email": "demo.tattoo@appointly.demo",
+   "website": "www.inkcraftstudio.in",
+   "rating": 4.7,
+   "reviews": 993,
+   "open": 720,
+   "close": 1320,
+   "sun": [
+    720,
+    1200
+   ],
+   "cancelHrs": 24,
+   "since": 2017,
+   "bot": "Capi",
+   "branches": [
+    "Banjara Hills"
+   ],
+   "about": "Custom tattoos and piercings by resident artists. Single-use needles and a free design consult.",
+   "amen": [
+    [
+     "car",
+     "Parking"
+    ],
+    [
+     "shield",
+     "Single-use tools"
+    ],
+    [
+     "card",
+     "UPI & cards"
+    ],
+    [
+     "heart",
+     "Premium products"
+    ],
+    [
+     "wifi",
+     "Free Wi-Fi"
+    ],
+    [
+     "users",
+     "Women staff available"
+    ]
+   ],
+   "insurance": [],
+   "faqs": [
+    [
+     "Is there an age limit?",
+     "You must be 18 or older, with a photo ID."
+    ]
+   ],
+   "owner": "Vikram Das",
+   "staff": [
+    {
+     "id": "inkcraftstudios0",
+     "name": "Vikram Das",
+     "role": "Tattoo artist",
+     "qual": "Fine line & realism",
+     "exp": 11,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Vikram"
+    },
+    {
+     "id": "inkcraftstudios1",
+     "name": "Zoya Mirza",
+     "role": "Tattoo artist",
+     "qual": "Neo-traditional",
+     "exp": 7,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Zoya"
+    }
+   ],
+   "services": [
+    {
+     "id": "inkcraftstudiov0",
+     "g": "Consults",
+     "name": "Design consultation",
+     "dur": 30,
+     "price": 0,
+     "desc": "Ideas, size and placement.",
+     "kw": [
+      "design",
+      "consultation",
+      "tattoo",
+      "studios",
+      "tattoo",
+      "ink",
+      "piercing"
+     ],
+     "staff": null
+    },
+    {
+     "id": "inkcraftstudiov1",
+     "g": "Tattoos",
+     "name": "Small tattoo (up to 2 in)",
+     "dur": 60,
+     "price": 2500,
+     "desc": "Fine line or simple designs.",
+     "kw": [
+      "small",
+      "tattoo",
+      "tattoo",
+      "studios",
+      "tattoo",
+      "ink",
+      "piercing"
+     ],
+     "staff": null
+    },
+    {
+     "id": "inkcraftstudiov2",
+     "g": "Tattoos",
+     "name": "Medium tattoo (half day)",
+     "dur": 180,
+     "price": 9000,
+     "desc": "Detailed pieces up to palm size.",
+     "kw": [
+      "medium",
+      "tattoo",
+      "half",
+      "day",
+      "tattoo",
+      "studios",
+      "tattoo",
+      "ink",
+      "piercing"
+     ],
+     "staff": null
+    },
+    {
+     "id": "inkcraftstudiov3",
+     "g": "Piercing",
+     "name": "Ear or nose piercing",
+     "dur": 20,
+     "price": 1200,
+     "desc": "Titanium jewellery included.",
+     "kw": [
+      "ear",
+      "nose",
+      "piercing",
+      "tattoo",
+      "studios",
+      "tattoo",
+      "ink",
+      "piercing"
+     ],
+     "staff": null
+    }
+   ],
+   "offers": [],
+   "breaks": [],
+   "holidays": [],
+   "slotInt": 30,
+   "buffer": 0,
+   "dailyLimit": 40,
+   "autoConfirm": true,
+   "status": "active",
+   "verified": true,
+   "demo": true,
+   "plan": "Starter",
+   "q": {},
+   "login_email": "demo.tattoo@appointly.demo"
+  },
+  {
+   "id": "primeproperties",
+   "bid": "APX-B-010",
+   "name": "Prime Properties",
+   "cat": "pro",
+   "sub": "realestate",
+   "ind": "Consultant",
+   "area": "Gachibowli",
+   "city": "Hyderabad",
+   "address": "Main Road, Gachibowli, Hyderabad",
+   "phone": "+91 40 4470 3710",
+   "email": "demo.realestate@appointly.demo",
+   "website": "www.primeproperties.in",
+   "rating": 4.8,
+   "reviews": 1090,
+   "open": 600,
+   "close": 1140,
+   "sun": [
+    600,
+    1020
+   ],
+   "cancelHrs": 12,
+   "since": 2018,
+   "bot": "Capi",
+   "branches": [
+    "Gachibowli"
+   ],
+   "about": "Buy, rent or sell homes in west Hyderabad. Book a site visit or a call with an agent.",
+   "amen": [
+    [
+     "globe",
+     "Online meetings"
+    ],
+    [
+     "car",
+     "Parking"
+    ],
+    [
+     "card",
+     "UPI & cards"
+    ],
+    [
+     "shield",
+     "Confidential"
+    ],
+    [
+     "clock",
+     "Evening slots"
+    ],
+    [
+     "wifi",
+     "Free Wi-Fi"
+    ]
+   ],
+   "insurance": [],
+   "faqs": [
+    [
+     "How do I reschedule?",
+     "Use the link in your WhatsApp confirmation, or ask Capi in the chat."
+    ]
+   ],
+   "owner": "Sanjay Varma",
+   "staff": [
+    {
+     "id": "primepropertiess0",
+     "name": "Sanjay Varma",
+     "role": "Senior agent",
+     "qual": "RERA registered",
+     "exp": 12,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Sanjay"
+    },
+    {
+     "id": "primepropertiess1",
+     "name": "Pooja Nair",
+     "role": "Rentals agent",
+     "qual": "RERA registered",
+     "exp": 5,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Pooja"
+    }
+   ],
+   "services": [
+    {
+     "id": "primepropertiesv0",
+     "g": "Visits",
+     "name": "Site visit",
+     "dur": 60,
+     "price": 0,
+     "desc": "See up to 3 homes with an agent.",
+     "kw": [
+      "site",
+      "visit",
+      "real",
+      "estate",
+      "agents",
+      "property",
+      "flat",
+      "house",
+      "home",
+      "rent",
+      "buy",
+      "sell",
+      "real",
+      "estate"
+     ],
+     "staff": null
+    },
+    {
+     "id": "primepropertiesv1",
+     "g": "Consultations",
+     "name": "Buyer consultation",
+     "dur": 30,
+     "price": 0,
+     "desc": "Budget, areas and loan options.",
+     "kw": [
+      "buyer",
+      "consultation",
+      "real",
+      "estate",
+      "agents",
+      "property",
+      "flat",
+      "house",
+      "home",
+      "rent",
+      "buy",
+      "sell",
+      "real",
+      "estate"
+     ],
+     "staff": null
+    },
+    {
+     "id": "primepropertiesv2",
+     "g": "Visits",
+     "name": "Rental viewing",
+     "dur": 45,
+     "price": 0,
+     "desc": "Shortlisted rentals in one trip.",
+     "kw": [
+      "rental",
+      "viewing",
+      "real",
+      "estate",
+      "agents",
+      "property",
+      "flat",
+      "house",
+      "home",
+      "rent",
+      "buy",
+      "sell",
+      "real",
+      "estate"
+     ],
+     "staff": null
+    },
+    {
+     "id": "primepropertiesv3",
+     "g": "Consultations",
+     "name": "Home valuation call",
+     "dur": 30,
+     "price": 0,
+     "desc": "Valuation and listing plan.",
+     "kw": [
+      "home",
+      "valuation",
+      "call",
+      "real",
+      "estate",
+      "agents",
+      "property",
+      "flat",
+      "house",
+      "home",
+      "rent",
+      "buy",
+      "sell",
+      "real",
+      "estate"
+     ],
+     "staff": null
+    }
+   ],
+   "offers": [],
+   "breaks": [
+    [
+     780,
+     840
+    ]
+   ],
+   "holidays": [],
+   "slotInt": 30,
+   "buffer": 0,
+   "dailyLimit": 40,
+   "autoConfirm": true,
+   "status": "active",
+   "verified": true,
+   "demo": true,
+   "plan": "Growth",
+   "q": {},
+   "login_email": "demo.realestate@appointly.demo"
+  },
+  {
+   "id": "securelifeadvisors",
+   "bid": "APX-B-011",
+   "name": "SecureLife Advisors",
+   "cat": "pro",
+   "sub": "insurance",
+   "ind": "Consultant",
+   "area": "Begumpet",
+   "city": "Hyderabad",
+   "address": "Main Road, Begumpet, Hyderabad",
+   "phone": "+91 40 4507 3981",
+   "email": "demo.insurance@appointly.demo",
+   "website": "www.securelifeadvisors.in",
+   "rating": 4.9,
+   "reviews": 1187,
+   "open": 600,
+   "close": 1140,
+   "sun": null,
+   "cancelHrs": 12,
+   "since": 2019,
+   "bot": "Capi",
+   "branches": [
+    "Begumpet"
+   ],
+   "about": "Independent advisors for health, term life, car and business insurance, with claim support.",
+   "amen": [
+    [
+     "globe",
+     "Online meetings"
+    ],
+    [
+     "car",
+     "Parking"
+    ],
+    [
+     "card",
+     "UPI & cards"
+    ],
+    [
+     "shield",
+     "Confidential"
+    ],
+    [
+     "clock",
+     "Evening slots"
+    ],
+    [
+     "wifi",
+     "Free Wi-Fi"
+    ]
+   ],
+   "insurance": [],
+   "faqs": [
+    [
+     "How do I reschedule?",
+     "Use the link in your WhatsApp confirmation, or ask Capi in the chat."
+    ]
+   ],
+   "owner": "Ritu Agarwal",
+   "staff": [
+    {
+     "id": "securelifeadvisorss0",
+     "name": "Ritu Agarwal",
+     "role": "Health & life advisor",
+     "qual": "IRDAI licensed",
+     "exp": 14,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Ritu"
+    },
+    {
+     "id": "securelifeadvisorss1",
+     "name": "Naveen Kumar",
+     "role": "Motor & business advisor",
+     "qual": "IRDAI licensed",
+     "exp": 8,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Naveen"
+    }
+   ],
+   "services": [
+    {
+     "id": "securelifeadvisorsv0",
+     "g": "Reviews",
+     "name": "Health insurance review",
+     "dur": 30,
+     "price": 0,
+     "desc": "Compare family floater plans.",
+     "kw": [
+      "health",
+      "insurance",
+      "review",
+      "insurance",
+      "advisors",
+      "insurance",
+      "policy",
+      "claim",
+      "health",
+      "life",
+      "car"
+     ],
+     "staff": null
+    },
+    {
+     "id": "securelifeadvisorsv1",
+     "g": "Reviews",
+     "name": "Term life planning",
+     "dur": 30,
+     "price": 0,
+     "desc": "Cover and riders explained.",
+     "kw": [
+      "term",
+      "life",
+      "planning",
+      "insurance",
+      "advisors",
+      "insurance",
+      "policy",
+      "claim",
+      "health",
+      "life",
+      "car"
+     ],
+     "staff": null
+    },
+    {
+     "id": "securelifeadvisorsv2",
+     "g": "Renewals",
+     "name": "Car insurance renewal",
+     "dur": 20,
+     "price": 0,
+     "desc": "Compare quotes and add-ons.",
+     "kw": [
+      "car",
+      "insurance",
+      "renewal",
+      "insurance",
+      "advisors",
+      "insurance",
+      "policy",
+      "claim",
+      "health",
+      "life",
+      "car"
+     ],
+     "staff": null
+    },
+    {
+     "id": "securelifeadvisorsv3",
+     "g": "Support",
+     "name": "Claim help call",
+     "dur": 30,
+     "price": 0,
+     "desc": "Help filing or following up a claim.",
+     "kw": [
+      "claim",
+      "help",
+      "call",
+      "insurance",
+      "advisors",
+      "insurance",
+      "policy",
+      "claim",
+      "health",
+      "life",
+      "car"
+     ],
+     "staff": null
+    }
+   ],
+   "offers": [],
+   "breaks": [
+    [
+     780,
+     840
+    ]
+   ],
+   "holidays": [],
+   "slotInt": 30,
+   "buffer": 0,
+   "dailyLimit": 40,
+   "autoConfirm": true,
+   "status": "active",
+   "verified": true,
+   "demo": true,
+   "plan": "Scale",
+   "q": {},
+   "login_email": "demo.insurance@appointly.demo"
+  },
+  {
+   "id": "growthbridgeconsulting",
+   "bid": "APX-B-012",
+   "name": "GrowthBridge Consulting",
+   "cat": "pro",
+   "sub": "consult",
+   "ind": "Consultant",
+   "area": "Somajiguda",
+   "city": "Hyderabad",
+   "address": "Main Road, Somajiguda, Hyderabad",
+   "phone": "+91 40 4544 4252",
+   "email": "demo.consult@appointly.demo",
+   "website": "www.growthbridgeconsulting.in",
+   "rating": 4.4,
+   "reviews": 1284,
+   "open": 600,
+   "close": 1140,
+   "sun": null,
+   "cancelHrs": 24,
+   "since": 2020,
+   "bot": "Capi",
+   "branches": [
+    "Somajiguda"
+   ],
+   "about": "Consultants for small businesses: tax, GST, company registration and growth planning.",
+   "amen": [
+    [
+     "globe",
+     "Online meetings"
+    ],
+    [
+     "car",
+     "Parking"
+    ],
+    [
+     "card",
+     "UPI & cards"
+    ],
+    [
+     "shield",
+     "Confidential"
+    ],
+    [
+     "clock",
+     "Evening slots"
+    ],
+    [
+     "wifi",
+     "Free Wi-Fi"
+    ]
+   ],
+   "insurance": [],
+   "faqs": [
+    [
+     "How do I reschedule?",
+     "Use the link in your WhatsApp confirmation, or ask Capi in the chat."
+    ]
+   ],
+   "owner": "Priya Menon",
+   "staff": [
+    {
+     "id": "growthbridgeconsultings0",
+     "name": "Priya Menon, CA",
+     "role": "Tax & compliance",
+     "qual": "FCA",
+     "exp": 13,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Priya"
+    },
+    {
+     "id": "growthbridgeconsultings1",
+     "name": "Karan Bhatia",
+     "role": "Business setup",
+     "qual": "CS, LLB",
+     "exp": 9,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Karan"
+    }
+   ],
+   "services": [
+    {
+     "id": "growthbridgeconsultingv0",
+     "g": "Tax",
+     "name": "Tax filing consult",
+     "dur": 45,
+     "price": 1500,
+     "desc": "ITR review and filing plan.",
+     "kw": [
+      "tax",
+      "filing",
+      "consult",
+      "business",
+      "consultants",
+      "tax",
+      "gst",
+      "company",
+      "business",
+      "consultant"
+     ],
+     "staff": null
+    },
+    {
+     "id": "growthbridgeconsultingv1",
+     "g": "Business",
+     "name": "Company registration call",
+     "dur": 30,
+     "price": 1000,
+     "desc": "Pvt Ltd, LLP or OPC options.",
+     "kw": [
+      "company",
+      "registration",
+      "call",
+      "business",
+      "consultants",
+      "tax",
+      "gst",
+      "company",
+      "business",
+      "consultant"
+     ],
+     "staff": null
+    },
+    {
+     "id": "growthbridgeconsultingv2",
+     "g": "Tax",
+     "name": "GST review",
+     "dur": 60,
+     "price": 2500,
+     "desc": "Returns, notices and input credit.",
+     "kw": [
+      "gst",
+      "review",
+      "business",
+      "consultants",
+      "tax",
+      "gst",
+      "company",
+      "business",
+      "consultant"
+     ],
+     "staff": null
+    },
+    {
+     "id": "growthbridgeconsultingv3",
+     "g": "Strategy",
+     "name": "Growth strategy session",
+     "dur": 60,
+     "price": 4000,
+     "desc": "Pricing, sales and hiring plan.",
+     "kw": [
+      "growth",
+      "strategy",
+      "session",
+      "business",
+      "consultants",
+      "tax",
+      "gst",
+      "company",
+      "business",
+      "consultant"
+     ],
+     "staff": null
+    }
+   ],
+   "offers": [],
+   "breaks": [
+    [
+     780,
+     840
+    ]
+   ],
+   "holidays": [],
+   "slotInt": 30,
+   "buffer": 0,
+   "dailyLimit": 40,
+   "autoConfirm": true,
+   "status": "active",
+   "verified": true,
+   "demo": true,
+   "plan": "Starter",
+   "q": {},
+   "login_email": "demo.consult@appointly.demo"
+  },
+  {
+   "id": "zenyogastudio",
+   "bid": "APX-B-013",
+   "name": "ZenYoga Studio",
+   "cat": "fitness",
+   "sub": "yoga",
+   "ind": "Gym",
+   "area": "HITEC City",
+   "city": "Hyderabad",
+   "address": "Main Road, HITEC City, Hyderabad",
+   "phone": "+91 40 4581 4523",
+   "email": "demo.yoga@appointly.demo",
+   "website": "www.zenyogastudio.in",
+   "rating": 4.5,
+   "reviews": 1381,
+   "open": 360,
+   "close": 1260,
+   "sun": [
+    420,
+    720
+   ],
+   "cancelHrs": 2,
+   "since": 2021,
+   "bot": "Capi",
+   "branches": [
+    "HITEC City"
+   ],
+   "about": "Small yoga classes for all levels, morning and evening. Mats and props provided.",
+   "amen": [
+    [
+     "shield",
+     "Lockers"
+    ],
+    [
+     "heart",
+     "Showers"
+    ],
+    [
+     "card",
+     "UPI & cards"
+    ],
+    [
+     "users",
+     "Small batches"
+    ],
+    [
+     "car",
+     "Parking"
+    ],
+    [
+     "wifi",
+     "Free Wi-Fi"
+    ]
+   ],
+   "insurance": [],
+   "faqs": [
+    [
+     "How do I reschedule?",
+     "Use the link in your WhatsApp confirmation, or ask Capi in the chat."
+    ]
+   ],
+   "owner": "Sara Thomas",
+   "staff": [
+    {
+     "id": "zenyogastudios0",
+     "name": "Sara Thomas",
+     "role": "Yoga teacher",
+     "qual": "RYT 500",
+     "exp": 6,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Sara"
+    },
+    {
+     "id": "zenyogastudios1",
+     "name": "Arun Joshi",
+     "role": "Yoga teacher",
+     "qual": "RYT 200",
+     "exp": 4,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Arun"
+    }
+   ],
+   "services": [
+    {
+     "id": "zenyogastudiov0",
+     "g": "Classes",
+     "name": "Group yoga class",
+     "dur": 60,
+     "price": 350,
+     "desc": "Up to 12 people, all levels.",
+     "kw": [
+      "group",
+      "yoga",
+      "class",
+      "yoga",
+      "studios",
+      "yoga",
+      "meditation",
+      "stretch"
+     ],
+     "staff": null
+    },
+    {
+     "id": "zenyogastudiov1",
+     "g": "Classes",
+     "name": "Beginner yoga",
+     "dur": 60,
+     "price": 300,
+     "desc": "Foundations and breathing.",
+     "kw": [
+      "beginner",
+      "yoga",
+      "yoga",
+      "studios",
+      "yoga",
+      "meditation",
+      "stretch"
+     ],
+     "staff": null
+    },
+    {
+     "id": "zenyogastudiov2",
+     "g": "Private",
+     "name": "Private yoga session",
+     "dur": 60,
+     "price": 1500,
+     "desc": "One-to-one.",
+     "kw": [
+      "private",
+      "yoga",
+      "session",
+      "yoga",
+      "studios",
+      "yoga",
+      "meditation",
+      "stretch"
+     ],
+     "staff": null
+    },
+    {
+     "id": "zenyogastudiov3",
+     "g": "Classes",
+     "name": "Free trial class",
+     "dur": 60,
+     "price": 0,
+     "desc": "Try any group class once.",
+     "kw": [
+      "free",
+      "trial",
+      "class",
+      "yoga",
+      "studios",
+      "yoga",
+      "meditation",
+      "stretch"
+     ],
+     "staff": null
+    }
+   ],
+   "offers": [
+    {
+     "id": "zenyogastudioo0",
+     "title": "First class free",
+     "desc": "New members only.",
+     "pct": 100,
+     "svc": "zenyogastudiov3",
+     "ends": 30,
+     "active": true
+    }
+   ],
+   "breaks": [
+    [
+     720,
+     960
+    ]
+   ],
+   "holidays": [],
+   "slotInt": 30,
+   "buffer": 0,
+   "dailyLimit": 40,
+   "autoConfirm": true,
+   "status": "active",
+   "verified": true,
+   "demo": true,
+   "plan": "Growth",
+   "q": {},
+   "login_email": "demo.yoga@appointly.demo"
+  },
+  {
+   "id": "corefitpilates",
+   "bid": "APX-B-014",
+   "name": "CoreFit Pilates",
+   "cat": "fitness",
+   "sub": "pilates",
+   "ind": "Gym",
+   "area": "Kukatpally",
+   "city": "Hyderabad",
+   "address": "Main Road, Kukatpally, Hyderabad",
+   "phone": "+91 40 4618 4794",
+   "email": "demo.pilates@appointly.demo",
+   "website": "www.corefitpilates.in",
+   "rating": 4.6,
+   "reviews": 1478,
+   "open": 390,
+   "close": 1230,
+   "sun": [
+    420,
+    720
+   ],
+   "cancelHrs": 6,
+   "since": 2008,
+   "bot": "Capi",
+   "branches": [
+    "Kukatpally"
+   ],
+   "about": "Reformer and mat Pilates in small groups, plus private sessions.",
+   "amen": [
+    [
+     "shield",
+     "Lockers"
+    ],
+    [
+     "heart",
+     "Showers"
+    ],
+    [
+     "card",
+     "UPI & cards"
+    ],
+    [
+     "users",
+     "Small batches"
+    ],
+    [
+     "car",
+     "Parking"
+    ],
+    [
+     "wifi",
+     "Free Wi-Fi"
+    ]
+   ],
+   "insurance": [],
+   "faqs": [
+    [
+     "How do I reschedule?",
+     "Use the link in your WhatsApp confirmation, or ask Capi in the chat."
+    ]
+   ],
+   "owner": "Riya Kapoor",
+   "staff": [
+    {
+     "id": "corefitpilatess0",
+     "name": "Riya Kapoor",
+     "role": "Pilates instructor",
+     "qual": "STOTT Pilates",
+     "exp": 8,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Riya"
+    },
+    {
+     "id": "corefitpilatess1",
+     "name": "Mark D’Souza",
+     "role": "Pilates instructor",
+     "qual": "BASI Pilates",
+     "exp": 5,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Mark"
+    }
+   ],
+   "services": [
+    {
+     "id": "corefitpilatesv0",
+     "g": "Classes",
+     "name": "Reformer Pilates",
+     "dur": 50,
+     "price": 1200,
+     "desc": "Small group on reformers.",
+     "kw": [
+      "reformer",
+      "pilates",
+      "pilates",
+      "centres",
+      "pilates",
+      "reformer",
+      "core"
+     ],
+     "staff": null
+    },
+    {
+     "id": "corefitpilatesv1",
+     "g": "Classes",
+     "name": "Mat Pilates",
+     "dur": 50,
+     "price": 600,
+     "desc": "Core-focused mat class.",
+     "kw": [
+      "mat",
+      "pilates",
+      "pilates",
+      "centres",
+      "pilates",
+      "reformer",
+      "core"
+     ],
+     "staff": null
+    },
+    {
+     "id": "corefitpilatesv2",
+     "g": "Private",
+     "name": "Private Pilates",
+     "dur": 55,
+     "price": 2000,
+     "desc": "One-to-one on the reformer.",
+     "kw": [
+      "private",
+      "pilates",
+      "pilates",
+      "centres",
+      "pilates",
+      "reformer",
+      "core"
+     ],
+     "staff": null
+    },
+    {
+     "id": "corefitpilatesv3",
+     "g": "Intro",
+     "name": "Intro session",
+     "dur": 45,
+     "price": 0,
+     "desc": "Learn the basics first.",
+     "kw": [
+      "intro",
+      "session",
+      "pilates",
+      "centres",
+      "pilates",
+      "reformer",
+      "core"
+     ],
+     "staff": null
+    }
+   ],
+   "offers": [
+    {
+     "id": "corefitpilateso0",
+     "title": "10% off 10-class pack",
+     "desc": "Save on your first pack.",
+     "pct": 10,
+     "svc": "corefitpilatesv0",
+     "ends": 14,
+     "active": true
+    }
+   ],
+   "breaks": [
+    [
+     780,
+     840
+    ]
+   ],
+   "holidays": [],
+   "slotInt": 30,
+   "buffer": 0,
+   "dailyLimit": 40,
+   "autoConfirm": true,
+   "status": "active",
+   "verified": true,
+   "demo": true,
+   "plan": "Scale",
+   "q": {},
+   "login_email": "demo.pilates@appointly.demo"
+  },
+  {
+   "id": "grandstayresort",
+   "bid": "APX-B-015",
+   "name": "GrandStay Resort",
+   "cat": "hosp",
+   "sub": "hotels",
+   "ind": "Banquet",
+   "area": "Shamirpet",
+   "city": "Hyderabad",
+   "address": "Main Road, Shamirpet, Hyderabad",
+   "phone": "+91 40 4655 5065",
+   "email": "demo.hotels@appointly.demo",
+   "website": "www.grandstayresort.in",
+   "rating": 4.7,
+   "reviews": 1575,
+   "open": 480,
+   "close": 1320,
+   "sun": [
+    480,
+    1320
+   ],
+   "cancelHrs": 48,
+   "since": 2009,
+   "bot": "Capi",
+   "branches": [
+    "Shamirpet"
+   ],
+   "about": "A lakeside resort about 40 minutes from the city, with day-outs, spa and dining.",
+   "amen": [
+    [
+     "car",
+     "Valet parking"
+    ],
+    [
+     "users",
+     "Large groups"
+    ],
+    [
+     "access",
+     "Wheelchair access"
+    ],
+    [
+     "card",
+     "UPI & cards"
+    ],
+    [
+     "heart",
+     "In-house catering"
+    ],
+    [
+     "wifi",
+     "Free Wi-Fi"
+    ]
+   ],
+   "insurance": [],
+   "faqs": [
+    [
+     "How do I reschedule?",
+     "Use the link in your WhatsApp confirmation, or ask Capi in the chat."
+    ]
+   ],
+   "owner": "Anil Mehra",
+   "staff": [
+    {
+     "id": "grandstayresorts0",
+     "name": "Front office",
+     "role": "Reservations",
+     "qual": "Resort desk",
+     "exp": 10,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Front office"
+    },
+    {
+     "id": "grandstayresorts1",
+     "name": "Spa desk",
+     "role": "Spa therapists",
+     "qual": "Certified",
+     "exp": 8,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Spa desk"
+    }
+   ],
+   "services": [
+    {
+     "id": "grandstayresortv0",
+     "g": "Packages",
+     "name": "Day-out package",
+     "dur": 360,
+     "price": 2499,
+     "desc": "Pool, lunch and games.",
+     "kw": [
+      "day",
+      "out",
+      "package",
+      "hotels",
+      "resorts",
+      "hotel",
+      "resort",
+      "stay",
+      "room",
+      "spa"
+     ],
+     "staff": null
+    },
+    {
+     "id": "grandstayresortv1",
+     "g": "Stays",
+     "name": "Room check-in slot",
+     "dur": 30,
+     "price": 0,
+     "desc": "Pick your arrival time for a booked stay.",
+     "kw": [
+      "room",
+      "check",
+      "slot",
+      "hotels",
+      "resorts",
+      "hotel",
+      "resort",
+      "stay",
+      "room",
+      "spa"
+     ],
+     "staff": null
+    },
+    {
+     "id": "grandstayresortv2",
+     "g": "Spa",
+     "name": "Spa massage",
+     "dur": 60,
+     "price": 3200,
+     "desc": "Signature full-body massage.",
+     "kw": [
+      "spa",
+      "massage",
+      "hotels",
+      "resorts",
+      "hotel",
+      "resort",
+      "stay",
+      "room",
+      "spa"
+     ],
+     "staff": null
+    },
+    {
+     "id": "grandstayresortv3",
+     "g": "Dining",
+     "name": "Lakeside dinner table",
+     "dur": 90,
+     "price": 0,
+     "desc": "A table for up to 6.",
+     "kw": [
+      "lakeside",
+      "dinner",
+      "table",
+      "hotels",
+      "resorts",
+      "hotel",
+      "resort",
+      "stay",
+      "room",
+      "spa"
+     ],
+     "staff": null
+    }
+   ],
+   "offers": [
+    {
+     "id": "grandstayresorto0",
+     "title": "Weekday day-out at ₹1,999",
+     "desc": "Monday to Thursday only.",
+     "pct": 20,
+     "svc": "grandstayresortv0",
+     "ends": 7,
+     "active": true
+    }
+   ],
+   "breaks": [],
+   "holidays": [],
+   "slotInt": 30,
+   "buffer": 0,
+   "dailyLimit": 40,
+   "autoConfirm": true,
+   "status": "active",
+   "verified": true,
+   "demo": true,
+   "plan": "Starter",
+   "q": {},
+   "login_email": "demo.hotels@appointly.demo"
+  },
+  {
+   "id": "celebrationhalls",
+   "bid": "APX-B-016",
+   "name": "Celebration Halls",
+   "cat": "hosp",
+   "sub": "banquet",
+   "ind": "Banquet",
+   "area": "Gachibowli",
+   "city": "Hyderabad",
+   "address": "Main Road, Gachibowli, Hyderabad",
+   "phone": "+91 40 4692 5336",
+   "email": "demo.banquet@appointly.demo",
+   "website": "www.celebrationhalls.in",
+   "rating": 4.8,
+   "reviews": 1672,
+   "open": 600,
+   "close": 1260,
+   "sun": [
+    600,
+    1260
+   ],
+   "cancelHrs": 48,
+   "since": 2010,
+   "bot": "Capi",
+   "branches": [
+    "Gachibowli"
+   ],
+   "about": "Two banquet halls and a rooftop lawn for weddings, birthdays and corporate events, with in-house catering.",
+   "amen": [
+    [
+     "car",
+     "Valet parking"
+    ],
+    [
+     "users",
+     "Large groups"
+    ],
+    [
+     "access",
+     "Wheelchair access"
+    ],
+    [
+     "card",
+     "UPI & cards"
+    ],
+    [
+     "heart",
+     "In-house catering"
+    ],
+    [
+     "wifi",
+     "Free Wi-Fi"
+    ]
+   ],
+   "insurance": [],
+   "faqs": [
+    [
+     "How do I reschedule?",
+     "Use the link in your WhatsApp confirmation, or ask Capi in the chat."
+    ]
+   ],
+   "owner": "Ananya Sethi",
+   "staff": [
+    {
+     "id": "celebrationhallss0",
+     "name": "Ananya Sethi",
+     "role": "Event manager",
+     "qual": "MBA, Events",
+     "exp": 9,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Ananya"
+    },
+    {
+     "id": "celebrationhallss1",
+     "name": "Farid Khan",
+     "role": "Venue coordinator",
+     "qual": "Hospitality diploma",
+     "exp": 6,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Farid"
+    }
+   ],
+   "services": [
+    {
+     "id": "celebrationhallsv0",
+     "g": "Visits",
+     "name": "Venue visit",
+     "dur": 45,
+     "price": 0,
+     "desc": "Tour the halls with a coordinator.",
+     "kw": [
+      "venue",
+      "visit",
+      "banquet",
+      "party",
+      "halls",
+      "wedding",
+      "party",
+      "birthday",
+      "hall",
+      "banquet",
+      "function",
+      "event"
+     ],
+     "staff": null
+    },
+    {
+     "id": "celebrationhallsv1",
+     "g": "Visits",
+     "name": "Menu tasting",
+     "dur": 60,
+     "price": 1500,
+     "desc": "Taste up to 8 dishes.",
+     "kw": [
+      "menu",
+      "tasting",
+      "banquet",
+      "party",
+      "halls",
+      "wedding",
+      "party",
+      "birthday",
+      "hall",
+      "banquet",
+      "function",
+      "event"
+     ],
+     "staff": null
+    },
+    {
+     "id": "celebrationhallsv2",
+     "g": "Bookings",
+     "name": "Party hall (4 hours)",
+     "dur": 240,
+     "price": 45000,
+     "desc": "Up to 150 guests, décor included.",
+     "kw": [
+      "party",
+      "hall",
+      "hours",
+      "banquet",
+      "party",
+      "halls",
+      "wedding",
+      "party",
+      "birthday",
+      "hall",
+      "banquet",
+      "function",
+      "event"
+     ],
+     "staff": null
+    },
+    {
+     "id": "celebrationhallsv3",
+     "g": "Bookings",
+     "name": "Wedding planning meeting",
+     "dur": 60,
+     "price": 0,
+     "desc": "Dates, packages and décor.",
+     "kw": [
+      "wedding",
+      "planning",
+      "meeting",
+      "banquet",
+      "party",
+      "halls",
+      "wedding",
+      "party",
+      "birthday",
+      "hall",
+      "banquet",
+      "function",
+      "event"
+     ],
+     "staff": null
+    }
+   ],
+   "offers": [],
+   "breaks": [],
+   "holidays": [],
+   "slotInt": 30,
+   "buffer": 0,
+   "dailyLimit": 40,
+   "autoConfirm": false,
+   "status": "active",
+   "verified": true,
+   "demo": true,
+   "plan": "Growth",
+   "q": {},
+   "login_email": "demo.banquet@appointly.demo"
+  },
+  {
+   "id": "capturemomentsstudio",
+   "bid": "APX-B-017",
+   "name": "CaptureMoments Studio",
+   "cat": "hosp",
+   "sub": "photo",
+   "ind": "Photo",
+   "area": "Madhapur",
+   "city": "Hyderabad",
+   "address": "Main Road, Madhapur, Hyderabad",
+   "phone": "+91 40 4729 5607",
+   "email": "demo.photo@appointly.demo",
+   "website": "www.capturemomentsstudio.in",
+   "rating": 4.9,
+   "reviews": 1769,
+   "open": 600,
+   "close": 1200,
+   "sun": [
+    600,
+    1200
+   ],
+   "cancelHrs": 24,
+   "since": 2011,
+   "bot": "Capi",
+   "branches": [
+    "Madhapur"
+   ],
+   "about": "Portraits, family and baby shoots, event coverage and passport photos. Edited images in 3 days.",
+   "amen": [
+    [
+     "car",
+     "Valet parking"
+    ],
+    [
+     "users",
+     "Large groups"
+    ],
+    [
+     "access",
+     "Wheelchair access"
+    ],
+    [
+     "card",
+     "UPI & cards"
+    ],
+    [
+     "heart",
+     "In-house catering"
+    ],
+    [
+     "wifi",
+     "Free Wi-Fi"
+    ]
+   ],
+   "insurance": [],
+   "faqs": [
+    [
+     "How do I reschedule?",
+     "Use the link in your WhatsApp confirmation, or ask Capi in the chat."
+    ]
+   ],
+   "owner": "Aditya Sen",
+   "staff": [
+    {
+     "id": "capturemomentsstudios0",
+     "name": "Aditya Sen",
+     "role": "Photographer",
+     "qual": "Portraits & events",
+     "exp": 10,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Aditya"
+    },
+    {
+     "id": "capturemomentsstudios1",
+     "name": "Lakshmi Iyer",
+     "role": "Photographer",
+     "qual": "Products & newborns",
+     "exp": 7,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Lakshmi"
+    }
+   ],
+   "services": [
+    {
+     "id": "capturemomentsstudiov0",
+     "g": "Quick",
+     "name": "Passport & visa photos",
+     "dur": 15,
+     "price": 200,
+     "desc": "Ready in 10 minutes.",
+     "kw": [
+      "passport",
+      "visa",
+      "photos",
+      "photography",
+      "studios",
+      "photo",
+      "photographer",
+      "photography",
+      "shoot"
+     ],
+     "staff": null
+    },
+    {
+     "id": "capturemomentsstudiov1",
+     "g": "Shoots",
+     "name": "Portrait session",
+     "dur": 60,
+     "price": 3500,
+     "desc": "10 edited photos.",
+     "kw": [
+      "portrait",
+      "session",
+      "photography",
+      "studios",
+      "photo",
+      "photographer",
+      "photography",
+      "shoot"
+     ],
+     "staff": null
+    },
+    {
+     "id": "capturemomentsstudiov2",
+     "g": "Shoots",
+     "name": "Family or baby shoot",
+     "dur": 90,
+     "price": 6000,
+     "desc": "25 edited photos, props included.",
+     "kw": [
+      "family",
+      "baby",
+      "shoot",
+      "photography",
+      "studios",
+      "photo",
+      "photographer",
+      "photography",
+      "shoot"
+     ],
+     "staff": null
+    },
+    {
+     "id": "capturemomentsstudiov3",
+     "g": "Events",
+     "name": "Event photography (4 hours)",
+     "dur": 240,
+     "price": 18000,
+     "desc": "Weddings, birthdays and corporate events.",
+     "kw": [
+      "event",
+      "photography",
+      "hours",
+      "photography",
+      "studios",
+      "photo",
+      "photographer",
+      "photography",
+      "shoot"
+     ],
+     "staff": null
+    }
+   ],
+   "offers": [
+    {
+     "id": "capturemomentsstudioo0",
+     "title": "5 extra edits on family shoots",
+     "desc": "Free with any family or baby shoot.",
+     "pct": 0,
+     "svc": "capturemomentsstudiov2",
+     "ends": 21,
+     "active": true
+    }
+   ],
+   "breaks": [
+    [
+     780,
+     840
+    ]
+   ],
+   "holidays": [],
+   "slotInt": 30,
+   "buffer": 0,
+   "dailyLimit": 40,
+   "autoConfirm": true,
+   "status": "active",
+   "verified": true,
+   "demo": true,
+   "plan": "Scale",
+   "q": {},
+   "login_email": "demo.photo@appointly.demo"
+  },
+  {
+   "id": "homefixservices",
+   "bid": "APX-B-018",
+   "name": "HomeFix Services",
+   "cat": "home",
+   "sub": "maint",
+   "ind": "Home",
+   "area": "Madhapur",
+   "city": "Hyderabad",
+   "address": "Main Road, Madhapur, Hyderabad",
+   "phone": "+91 40 4766 5878",
+   "email": "demo.maint@appointly.demo",
+   "website": "www.homefixservices.in",
+   "rating": 4.4,
+   "reviews": 1866,
+   "open": 480,
+   "close": 1200,
+   "sun": [
+    540,
+    1080
+   ],
+   "cancelHrs": 2,
+   "since": 2012,
+   "bot": "Capi",
+   "branches": [
+    "At your home"
+   ],
+   "about": "Handymen and carpenters for everyday repairs. Pick a time and they come to your door.",
+   "amen": [
+    [
+     "shield",
+     "Verified technicians"
+    ],
+    [
+     "card",
+     "Pay after the job"
+    ],
+    [
+     "clock",
+     "On-time guarantee"
+    ],
+    [
+     "check",
+     "30-day warranty"
+    ],
+    [
+     "users",
+     "Background-checked"
+    ],
+    [
+     "phone",
+     "Live tracking"
+    ]
+   ],
+   "insurance": [],
+   "faqs": [
+    [
+     "How do I reschedule?",
+     "Use the link in your WhatsApp confirmation, or ask Capi in the chat."
+    ]
+   ],
+   "owner": "Ramesh Goud",
+   "staff": [
+    {
+     "id": "homefixservicess0",
+     "name": "Ramesh Goud",
+     "role": "Handyman",
+     "qual": "15 yrs experience",
+     "exp": 15,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Ramesh"
+    },
+    {
+     "id": "homefixservicess1",
+     "name": "Joseph Mathew",
+     "role": "Carpenter",
+     "qual": "ITI Carpentry",
+     "exp": 9,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Joseph"
+    }
+   ],
+   "services": [
+    {
+     "id": "homefixservicesv0",
+     "g": "Repairs",
+     "name": "Handyman visit",
+     "dur": 60,
+     "price": 299,
+     "desc": "Small fixes around the house.",
+     "kw": [
+      "handyman",
+      "visit",
+      "home",
+      "maintenance",
+      "repair",
+      "handyman",
+      "carpenter",
+      "fix",
+      "home",
+      "maintenance"
+     ],
+     "staff": null
+    },
+    {
+     "id": "homefixservicesv1",
+     "g": "Repairs",
+     "name": "Furniture assembly",
+     "dur": 90,
+     "price": 799,
+     "desc": "Beds, wardrobes and tables.",
+     "kw": [
+      "furniture",
+      "assembly",
+      "home",
+      "maintenance",
+      "repair",
+      "handyman",
+      "carpenter",
+      "fix",
+      "home",
+      "maintenance"
+     ],
+     "staff": null
+    },
+    {
+     "id": "homefixservicesv2",
+     "g": "Repairs",
+     "name": "Door & lock repair",
+     "dur": 60,
+     "price": 399,
+     "desc": "Hinges, locks and handles.",
+     "kw": [
+      "door",
+      "lock",
+      "repair",
+      "home",
+      "maintenance",
+      "repair",
+      "handyman",
+      "carpenter",
+      "fix",
+      "home",
+      "maintenance"
+     ],
+     "staff": null
+    },
+    {
+     "id": "homefixservicesv3",
+     "g": "Installation",
+     "name": "Wall mounting",
+     "dur": 45,
+     "price": 499,
+     "desc": "TVs, shelves and frames.",
+     "kw": [
+      "wall",
+      "mounting",
+      "home",
+      "maintenance",
+      "repair",
+      "handyman",
+      "carpenter",
+      "fix",
+      "home",
+      "maintenance"
+     ],
+     "staff": null
+    }
+   ],
+   "offers": [],
+   "breaks": [
+    [
+     780,
+     840
+    ]
+   ],
+   "holidays": [],
+   "slotInt": 30,
+   "buffer": 0,
+   "dailyLimit": 40,
+   "autoConfirm": true,
+   "status": "active",
+   "verified": true,
+   "demo": true,
+   "plan": "Starter",
+   "q": {},
+   "login_email": "demo.maint@appointly.demo"
+  },
+  {
+   "id": "sparkleclean",
+   "bid": "APX-B-019",
+   "name": "SparkleClean",
+   "cat": "home",
+   "sub": "cleaning",
+   "ind": "Home",
+   "area": "Kondapur",
+   "city": "Hyderabad",
+   "address": "Main Road, Kondapur, Hyderabad",
+   "phone": "+91 40 4803 6149",
+   "email": "demo.cleaning@appointly.demo",
+   "website": "www.sparkleclean.in",
+   "rating": 4.5,
+   "reviews": 1963,
+   "open": 480,
+   "close": 1140,
+   "sun": [
+    540,
+    1020
+   ],
+   "cancelHrs": 4,
+   "since": 2013,
+   "bot": "Capi",
+   "branches": [
+    "At your home"
+   ],
+   "about": "Trained cleaning crews with their own equipment and safe products.",
+   "amen": [
+    [
+     "shield",
+     "Verified technicians"
+    ],
+    [
+     "card",
+     "Pay after the job"
+    ],
+    [
+     "clock",
+     "On-time guarantee"
+    ],
+    [
+     "check",
+     "30-day warranty"
+    ],
+    [
+     "users",
+     "Background-checked"
+    ],
+    [
+     "phone",
+     "Live tracking"
+    ]
+   ],
+   "insurance": [],
+   "faqs": [
+    [
+     "How do I reschedule?",
+     "Use the link in your WhatsApp confirmation, or ask Capi in the chat."
+    ]
+   ],
+   "owner": "Lakshmi B.",
+   "staff": [
+    {
+     "id": "sparklecleans0",
+     "name": "Shine Crew",
+     "role": "Cleaning team of 3",
+     "qual": "Trained crew",
+     "exp": 5,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Shine Crew"
+    },
+    {
+     "id": "sparklecleans1",
+     "name": "Lakshmi B.",
+     "role": "Cleaning supervisor",
+     "qual": "8 yrs experience",
+     "exp": 8,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Lakshmi"
+    }
+   ],
+   "services": [
+    {
+     "id": "sparklecleanv0",
+     "g": "Home",
+     "name": "Deep home cleaning (2BHK)",
+     "dur": 240,
+     "price": 3499,
+     "desc": "Kitchen, bathrooms and all rooms.",
+     "kw": [
+      "deep",
+      "home",
+      "cleaning",
+      "2bhk",
+      "cleaning",
+      "services",
+      "clean",
+      "cleaning",
+      "maid",
+      "house",
+      "deep"
+     ],
+     "staff": null
+    },
+    {
+     "id": "sparklecleanv1",
+     "g": "Home",
+     "name": "Bathroom cleaning",
+     "dur": 60,
+     "price": 699,
+     "desc": "Tiles, fittings and floors.",
+     "kw": [
+      "bathroom",
+      "cleaning",
+      "cleaning",
+      "services",
+      "clean",
+      "cleaning",
+      "maid",
+      "house",
+      "deep"
+     ],
+     "staff": null
+    },
+    {
+     "id": "sparklecleanv2",
+     "g": "Home",
+     "name": "Kitchen cleaning",
+     "dur": 120,
+     "price": 1499,
+     "desc": "Chimney, cabinets and floors.",
+     "kw": [
+      "kitchen",
+      "cleaning",
+      "cleaning",
+      "services",
+      "clean",
+      "cleaning",
+      "maid",
+      "house",
+      "deep"
+     ],
+     "staff": null
+    },
+    {
+     "id": "sparklecleanv3",
+     "g": "Furniture",
+     "name": "Sofa shampoo",
+     "dur": 90,
+     "price": 999,
+     "desc": "Up to 5 seats.",
+     "kw": [
+      "sofa",
+      "shampoo",
+      "cleaning",
+      "services",
+      "clean",
+      "cleaning",
+      "maid",
+      "house",
+      "deep"
+     ],
+     "staff": null
+    }
+   ],
+   "offers": [
+    {
+     "id": "sparklecleano0",
+     "title": "₹500 off your first deep clean",
+     "desc": "For new customers.",
+     "pct": 0,
+     "svc": "sparklecleanv0",
+     "ends": 30,
+     "active": true
+    }
+   ],
+   "breaks": [
+    [
+     780,
+     840
+    ]
+   ],
+   "holidays": [],
+   "slotInt": 30,
+   "buffer": 0,
+   "dailyLimit": 40,
+   "autoConfirm": true,
+   "status": "active",
+   "verified": true,
+   "demo": true,
+   "plan": "Growth",
+   "q": {},
+   "login_email": "demo.cleaning@appointly.demo"
+  },
+  {
+   "id": "powercareelectricals",
+   "bid": "APX-B-020",
+   "name": "PowerCare Electricals",
+   "cat": "home",
+   "sub": "electric",
+   "ind": "Home",
+   "area": "Kukatpally",
+   "city": "Hyderabad",
+   "address": "Main Road, Kukatpally, Hyderabad",
+   "phone": "+91 40 4840 6420",
+   "email": "demo.electric@appointly.demo",
+   "website": "www.powercareelectricals.in",
+   "rating": 4.6,
+   "reviews": 160,
+   "open": 480,
+   "close": 1200,
+   "sun": [
+    540,
+    1080
+   ],
+   "cancelHrs": 2,
+   "since": 2014,
+   "bot": "Capi",
+   "branches": [
+    "At your home"
+   ],
+   "about": "Licensed electricians for repairs, installations and safety checks.",
+   "amen": [
+    [
+     "shield",
+     "Verified technicians"
+    ],
+    [
+     "card",
+     "Pay after the job"
+    ],
+    [
+     "clock",
+     "On-time guarantee"
+    ],
+    [
+     "check",
+     "30-day warranty"
+    ],
+    [
+     "users",
+     "Background-checked"
+    ],
+    [
+     "phone",
+     "Live tracking"
+    ]
+   ],
+   "insurance": [],
+   "faqs": [
+    [
+     "How do I reschedule?",
+     "Use the link in your WhatsApp confirmation, or ask Capi in the chat."
+    ]
+   ],
+   "owner": "Venkat Rao",
+   "staff": [
+    {
+     "id": "powercareelectricalss0",
+     "name": "Venkat Rao",
+     "role": "Electrician",
+     "qual": "ITI Electrical",
+     "exp": 12,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Venkat"
+    },
+    {
+     "id": "powercareelectricalss1",
+     "name": "Imtiaz Ali",
+     "role": "Electrician",
+     "qual": "ITI Electrical",
+     "exp": 7,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Imtiaz"
+    }
+   ],
+   "services": [
+    {
+     "id": "powercareelectricalsv0",
+     "g": "Repairs",
+     "name": "Electrician visit",
+     "dur": 60,
+     "price": 299,
+     "desc": "Switches, lights and sockets.",
+     "kw": [
+      "electrician",
+      "visit",
+      "electricians",
+      "electric",
+      "electrician",
+      "wiring",
+      "switch",
+      "fan",
+      "light",
+      "power"
+     ],
+     "staff": null
+    },
+    {
+     "id": "powercareelectricalsv1",
+     "g": "Installation",
+     "name": "Fan installation",
+     "dur": 45,
+     "price": 349,
+     "desc": "Ceiling or wall fans.",
+     "kw": [
+      "fan",
+      "installation",
+      "electricians",
+      "electric",
+      "electrician",
+      "wiring",
+      "switch",
+      "fan",
+      "light",
+      "power"
+     ],
+     "staff": null
+    },
+    {
+     "id": "powercareelectricalsv2",
+     "g": "Inspection",
+     "name": "Wiring check",
+     "dur": 60,
+     "price": 499,
+     "desc": "Safety check for a 2BHK.",
+     "kw": [
+      "wiring",
+      "check",
+      "electricians",
+      "electric",
+      "electrician",
+      "wiring",
+      "switch",
+      "fan",
+      "light",
+      "power"
+     ],
+     "staff": null
+    },
+    {
+     "id": "powercareelectricalsv3",
+     "g": "Installation",
+     "name": "Inverter installation",
+     "dur": 90,
+     "price": 799,
+     "desc": "Inverter and battery setup.",
+     "kw": [
+      "inverter",
+      "installation",
+      "electricians",
+      "electric",
+      "electrician",
+      "wiring",
+      "switch",
+      "fan",
+      "light",
+      "power"
+     ],
+     "staff": null
+    }
+   ],
+   "offers": [],
+   "breaks": [
+    [
+     780,
+     840
+    ]
+   ],
+   "holidays": [],
+   "slotInt": 30,
+   "buffer": 0,
+   "dailyLimit": 40,
+   "autoConfirm": true,
+   "status": "active",
+   "verified": true,
+   "demo": true,
+   "plan": "Scale",
+   "q": {},
+   "login_email": "demo.electric@appointly.demo"
+  },
+  {
+   "id": "aquafixplumbing",
+   "bid": "APX-B-021",
+   "name": "AquaFix Plumbing",
+   "cat": "home",
+   "sub": "plumb",
+   "ind": "Home",
+   "area": "Ameerpet",
+   "city": "Hyderabad",
+   "address": "Main Road, Ameerpet, Hyderabad",
+   "phone": "+91 40 4877 6691",
+   "email": "demo.plumb@appointly.demo",
+   "website": "www.aquafixplumbing.in",
+   "rating": 4.7,
+   "reviews": 257,
+   "open": 480,
+   "close": 1200,
+   "sun": [
+    540,
+    1080
+   ],
+   "cancelHrs": 2,
+   "since": 2015,
+   "bot": "Capi",
+   "branches": [
+    "At your home"
+   ],
+   "about": "Plumbers for leaks, blockages and new fittings, usually the same day.",
+   "amen": [
+    [
+     "shield",
+     "Verified technicians"
+    ],
+    [
+     "card",
+     "Pay after the job"
+    ],
+    [
+     "clock",
+     "On-time guarantee"
+    ],
+    [
+     "check",
+     "30-day warranty"
+    ],
+    [
+     "users",
+     "Background-checked"
+    ],
+    [
+     "phone",
+     "Live tracking"
+    ]
+   ],
+   "insurance": [],
+   "faqs": [
+    [
+     "How do I reschedule?",
+     "Use the link in your WhatsApp confirmation, or ask Capi in the chat."
+    ]
+   ],
+   "owner": "Salim Ahmed",
+   "staff": [
+    {
+     "id": "aquafixplumbings0",
+     "name": "Salim Ahmed",
+     "role": "Plumber",
+     "qual": "ITI Plumbing",
+     "exp": 10,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Salim"
+    },
+    {
+     "id": "aquafixplumbings1",
+     "name": "Suresh Naik",
+     "role": "Plumber",
+     "qual": "ITI Plumbing",
+     "exp": 6,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Suresh"
+    }
+   ],
+   "services": [
+    {
+     "id": "aquafixplumbingv0",
+     "g": "Repairs",
+     "name": "Plumber visit",
+     "dur": 60,
+     "price": 299,
+     "desc": "Leaks, taps and fittings.",
+     "kw": [
+      "plumber",
+      "visit",
+      "plumbers",
+      "plumber",
+      "plumbing",
+      "leak",
+      "tap",
+      "pipe",
+      "drain",
+      "water"
+     ],
+     "staff": null
+    },
+    {
+     "id": "aquafixplumbingv1",
+     "g": "Repairs",
+     "name": "Leak repair",
+     "dur": 60,
+     "price": 399,
+     "desc": "Pipes, tanks and joints.",
+     "kw": [
+      "leak",
+      "repair",
+      "plumbers",
+      "plumber",
+      "plumbing",
+      "leak",
+      "tap",
+      "pipe",
+      "drain",
+      "water"
+     ],
+     "staff": null
+    },
+    {
+     "id": "aquafixplumbingv2",
+     "g": "Installation",
+     "name": "Tap & fitting replacement",
+     "dur": 45,
+     "price": 349,
+     "desc": "Taps, showers and mixers.",
+     "kw": [
+      "tap",
+      "fitting",
+      "replacement",
+      "plumbers",
+      "plumber",
+      "plumbing",
+      "leak",
+      "tap",
+      "pipe",
+      "drain",
+      "water"
+     ],
+     "staff": null
+    },
+    {
+     "id": "aquafixplumbingv3",
+     "g": "Repairs",
+     "name": "Drain unblocking",
+     "dur": 60,
+     "price": 499,
+     "desc": "Kitchen and bathroom drains.",
+     "kw": [
+      "drain",
+      "unblocking",
+      "plumbers",
+      "plumber",
+      "plumbing",
+      "leak",
+      "tap",
+      "pipe",
+      "drain",
+      "water"
+     ],
+     "staff": null
+    }
+   ],
+   "offers": [],
+   "breaks": [
+    [
+     780,
+     840
+    ]
+   ],
+   "holidays": [],
+   "slotInt": 30,
+   "buffer": 0,
+   "dailyLimit": 40,
+   "autoConfirm": true,
+   "status": "active",
+   "verified": true,
+   "demo": true,
+   "plan": "Starter",
+   "q": {},
+   "login_email": "demo.plumb@appointly.demo"
+  },
+  {
+   "id": "coolcareacservices",
+   "bid": "APX-B-022",
+   "name": "CoolCare AC Services",
+   "cat": "home",
+   "sub": "ac",
+   "ind": "Home",
+   "area": "Miyapur",
+   "city": "Hyderabad",
+   "address": "Main Road, Miyapur, Hyderabad",
+   "phone": "+91 40 4914 6962",
+   "email": "demo.ac@appointly.demo",
+   "website": "www.coolcareacservices.in",
+   "rating": 4.8,
+   "reviews": 354,
+   "open": 480,
+   "close": 1200,
+   "sun": [
+    540,
+    1080
+   ],
+   "cancelHrs": 2,
+   "since": 2016,
+   "bot": "Capi",
+   "branches": [
+    "At your home"
+   ],
+   "about": "AC servicing, repairs and installation for all major brands.",
+   "amen": [
+    [
+     "shield",
+     "Verified technicians"
+    ],
+    [
+     "card",
+     "Pay after the job"
+    ],
+    [
+     "clock",
+     "On-time guarantee"
+    ],
+    [
+     "check",
+     "30-day warranty"
+    ],
+    [
+     "users",
+     "Background-checked"
+    ],
+    [
+     "phone",
+     "Live tracking"
+    ]
+   ],
+   "insurance": [],
+   "faqs": [
+    [
+     "How do I reschedule?",
+     "Use the link in your WhatsApp confirmation, or ask Capi in the chat."
+    ]
+   ],
+   "owner": "Kiran Rao",
+   "staff": [
+    {
+     "id": "coolcareacservicess0",
+     "name": "Kiran Rao",
+     "role": "AC technician",
+     "qual": "HVAC certified",
+     "exp": 8,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Kiran"
+    },
+    {
+     "id": "coolcareacservicess1",
+     "name": "Abdul Khader",
+     "role": "AC technician",
+     "qual": "HVAC certified",
+     "exp": 6,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Abdul"
+    }
+   ],
+   "services": [
+    {
+     "id": "coolcareacservicesv0",
+     "g": "Service",
+     "name": "AC service",
+     "dur": 60,
+     "price": 599,
+     "desc": "Filter and coil cleaning, gas check.",
+     "kw": [
+      "service",
+      "technicians",
+      "air",
+      "conditioner",
+      "cooling",
+      "aircon"
+     ],
+     "staff": null
+    },
+    {
+     "id": "coolcareacservicesv1",
+     "g": "Repairs",
+     "name": "AC gas refill",
+     "dur": 90,
+     "price": 2499,
+     "desc": "Includes leak check.",
+     "kw": [
+      "gas",
+      "refill",
+      "technicians",
+      "air",
+      "conditioner",
+      "cooling",
+      "aircon"
+     ],
+     "staff": null
+    },
+    {
+     "id": "coolcareacservicesv2",
+     "g": "Installation",
+     "name": "AC installation",
+     "dur": 120,
+     "price": 1499,
+     "desc": "Split or window AC.",
+     "kw": [
+      "installation",
+      "technicians",
+      "air",
+      "conditioner",
+      "cooling",
+      "aircon"
+     ],
+     "staff": null
+    },
+    {
+     "id": "coolcareacservicesv3",
+     "g": "Repairs",
+     "name": "AC repair visit",
+     "dur": 60,
+     "price": 399,
+     "desc": "Diagnosis and quote.",
+     "kw": [
+      "repair",
+      "visit",
+      "technicians",
+      "air",
+      "conditioner",
+      "cooling",
+      "aircon"
+     ],
+     "staff": null
+    }
+   ],
+   "offers": [
+    {
+     "id": "coolcareacserviceso0",
+     "title": "AC service at ₹499",
+     "desc": "Limited-time summer price.",
+     "pct": 17,
+     "svc": "coolcareacservicesv0",
+     "ends": 5,
+     "active": true
+    }
+   ],
+   "breaks": [
+    [
+     780,
+     840
+    ]
+   ],
+   "holidays": [],
+   "slotInt": 30,
+   "buffer": 0,
+   "dailyLimit": 40,
+   "autoConfirm": true,
+   "status": "active",
+   "verified": true,
+   "demo": true,
+   "plan": "Growth",
+   "q": {},
+   "login_email": "demo.ac@appointly.demo"
+  },
+  {
+   "id": "documenthelpcentre",
+   "bid": "APX-B-023",
+   "name": "DocumentHelp Centre",
+   "cat": "gov",
+   "sub": "docs",
+   "ind": "Government",
+   "area": "Kondapur",
+   "city": "Hyderabad",
+   "address": "Main Road, Kondapur, Hyderabad",
+   "phone": "+91 40 4951 7233",
+   "email": "demo.docs@appointly.demo",
+   "website": "www.documenthelpcentre.in",
+   "rating": 4.9,
+   "reviews": 451,
+   "open": 600,
+   "close": 1020,
+   "sun": null,
+   "cancelHrs": 2,
+   "since": 2017,
+   "bot": "Capi",
+   "branches": [
+    "Kondapur"
+   ],
+   "about": "Book a counter slot instead of waiting in line for certificates and document services.",
+   "amen": [
+    [
+     "clock",
+     "No queue with a booking"
+    ],
+    [
+     "access",
+     "Wheelchair access"
+    ],
+    [
+     "users",
+     "Senior citizen counter"
+    ],
+    [
+     "card",
+     "UPI & cards"
+    ],
+    [
+     "shield",
+     "Secure documents"
+    ],
+    [
+     "car",
+     "Parking"
+    ]
+   ],
+   "insurance": [],
+   "faqs": [
+    [
+     "How do I reschedule?",
+     "Use the link in your WhatsApp confirmation, or ask Capi in the chat."
+    ]
+   ],
+   "owner": "Centre manager",
+   "staff": [
+    {
+     "id": "documenthelpcentres0",
+     "name": "Counter 1",
+     "role": "Certificates",
+     "qual": "Revenue services",
+     "exp": 10,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Counter 1"
+    },
+    {
+     "id": "documenthelpcentres1",
+     "name": "Counter 2",
+     "role": "Document verification",
+     "qual": "Records office",
+     "exp": 10,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Counter 2"
+    }
+   ],
+   "services": [
+    {
+     "id": "documenthelpcentrev0",
+     "g": "Documents",
+     "name": "Document verification",
+     "dur": 15,
+     "price": 0,
+     "desc": "Attestation and verification of originals.",
+     "kw": [
+      "document",
+      "verification",
+      "document",
+      "appointments",
+      "document",
+      "certificate",
+      "verification",
+      "government"
+     ],
+     "staff": null
+    },
+    {
+     "id": "documenthelpcentrev1",
+     "g": "Certificates",
+     "name": "Certificate application",
+     "dur": 15,
+     "price": 45,
+     "desc": "Income, caste or residence certificates.",
+     "kw": [
+      "certificate",
+      "application",
+      "document",
+      "appointments",
+      "document",
+      "certificate",
+      "verification",
+      "government"
+     ],
+     "staff": null
+    },
+    {
+     "id": "documenthelpcentrev2",
+     "g": "Documents",
+     "name": "Affidavit & notary help",
+     "dur": 20,
+     "price": 150,
+     "desc": "Drafting and notarisation.",
+     "kw": [
+      "affidavit",
+      "notary",
+      "help",
+      "document",
+      "appointments",
+      "document",
+      "certificate",
+      "verification",
+      "government"
+     ],
+     "staff": null
+    },
+    {
+     "id": "documenthelpcentrev3",
+     "g": "Documents",
+     "name": "Address proof update",
+     "dur": 15,
+     "price": 50,
+     "desc": "Update address records.",
+     "kw": [
+      "address",
+      "proof",
+      "update",
+      "document",
+      "appointments",
+      "document",
+      "certificate",
+      "verification",
+      "government"
+     ],
+     "staff": null
+    }
+   ],
+   "offers": [],
+   "breaks": [
+    [
+     780,
+     840
+    ]
+   ],
+   "holidays": [],
+   "slotInt": 30,
+   "buffer": 0,
+   "dailyLimit": 40,
+   "autoConfirm": true,
+   "status": "active",
+   "verified": true,
+   "demo": true,
+   "plan": "Scale",
+   "q": {},
+   "login_email": "demo.docs@appointly.demo"
+  },
+  {
+   "id": "passportassistancecentre",
+   "bid": "APX-B-024",
+   "name": "Passport Assistance Centre",
+   "cat": "gov",
+   "sub": "passport",
+   "ind": "Government",
+   "area": "Ameerpet",
+   "city": "Hyderabad",
+   "address": "Main Road, Ameerpet, Hyderabad",
+   "phone": "+91 40 4988 7504",
+   "email": "demo.passport@appointly.demo",
+   "website": "www.passportassistancecentre.in",
+   "rating": 4.4,
+   "reviews": 548,
+   "open": 600,
+   "close": 1020,
+   "sun": null,
+   "cancelHrs": 2,
+   "since": 2018,
+   "bot": "Capi",
+   "branches": [
+    "Ameerpet"
+   ],
+   "about": "Help with passport forms and documents before your official appointment.",
+   "amen": [
+    [
+     "clock",
+     "No queue with a booking"
+    ],
+    [
+     "access",
+     "Wheelchair access"
+    ],
+    [
+     "users",
+     "Senior citizen counter"
+    ],
+    [
+     "card",
+     "UPI & cards"
+    ],
+    [
+     "shield",
+     "Secure documents"
+    ],
+    [
+     "car",
+     "Parking"
+    ]
+   ],
+   "insurance": [],
+   "faqs": [
+    [
+     "Is this the official passport appointment?",
+     "No. Official passport appointments are booked on the Passport Seva portal. We help you prepare for it."
+    ]
+   ],
+   "owner": "Centre manager",
+   "staff": [
+    {
+     "id": "passportassistancecentres0",
+     "name": "Counter 1",
+     "role": "Form filling help",
+     "qual": "Facilitation desk",
+     "exp": 8,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Counter 1"
+    },
+    {
+     "id": "passportassistancecentres1",
+     "name": "Counter 2",
+     "role": "Document check",
+     "qual": "Facilitation desk",
+     "exp": 8,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Counter 2"
+    }
+   ],
+   "services": [
+    {
+     "id": "passportassistancecentrev0",
+     "g": "Passport",
+     "name": "Passport form help",
+     "dur": 30,
+     "price": 100,
+     "desc": "Fill the online form with an assistant.",
+     "kw": [
+      "passport",
+      "form",
+      "help",
+      "passport",
+      "services",
+      "passport",
+      "visa",
+      "tatkal"
+     ],
+     "staff": null
+    },
+    {
+     "id": "passportassistancecentrev1",
+     "g": "Passport",
+     "name": "Document check",
+     "dur": 20,
+     "price": 50,
+     "desc": "Check documents before your appointment.",
+     "kw": [
+      "document",
+      "check",
+      "passport",
+      "services",
+      "passport",
+      "visa",
+      "tatkal"
+     ],
+     "staff": null
+    },
+    {
+     "id": "passportassistancecentrev2",
+     "g": "Passport",
+     "name": "Photo & print",
+     "dur": 15,
+     "price": 100,
+     "desc": "Photos and printouts.",
+     "kw": [
+      "photo",
+      "print",
+      "passport",
+      "services",
+      "passport",
+      "visa",
+      "tatkal"
+     ],
+     "staff": null
+    },
+    {
+     "id": "passportassistancecentrev3",
+     "g": "Passport",
+     "name": "Tatkal guidance",
+     "dur": 30,
+     "price": 150,
+     "desc": "What you need for a Tatkal application.",
+     "kw": [
+      "tatkal",
+      "guidance",
+      "passport",
+      "services",
+      "passport",
+      "visa",
+      "tatkal"
+     ],
+     "staff": null
+    }
+   ],
+   "offers": [],
+   "breaks": [
+    [
+     780,
+     840
+    ]
+   ],
+   "holidays": [],
+   "slotInt": 30,
+   "buffer": 0,
+   "dailyLimit": 40,
+   "autoConfirm": true,
+   "status": "active",
+   "verified": true,
+   "demo": true,
+   "plan": "Starter",
+   "q": {},
+   "login_email": "demo.passport@appointly.demo"
+  },
+  {
+   "id": "publicconsultationcentre",
+   "bid": "APX-B-025",
+   "name": "Public Consultation Centre",
+   "cat": "gov",
+   "sub": "publicc",
+   "ind": "Government",
+   "area": "Lakdikapul",
+   "city": "Hyderabad",
+   "address": "Main Road, Lakdikapul, Hyderabad",
+   "phone": "+91 40 4025 7775",
+   "email": "demo.publicc@appointly.demo",
+   "website": "www.publicconsultationcentre.in",
+   "rating": 4.5,
+   "reviews": 645,
+   "open": 600,
+   "close": 1020,
+   "sun": null,
+   "cancelHrs": 2,
+   "since": 2019,
+   "bot": "Capi",
+   "branches": [
+    "Lakdikapul"
+   ],
+   "about": "Book a time to meet an officer for civic issues, grievances and scheme information.",
+   "amen": [
+    [
+     "clock",
+     "No queue with a booking"
+    ],
+    [
+     "access",
+     "Wheelchair access"
+    ],
+    [
+     "users",
+     "Senior citizen counter"
+    ],
+    [
+     "card",
+     "UPI & cards"
+    ],
+    [
+     "shield",
+     "Secure documents"
+    ],
+    [
+     "car",
+     "Parking"
+    ]
+   ],
+   "insurance": [],
+   "faqs": [
+    [
+     "How do I reschedule?",
+     "Use the link in your WhatsApp confirmation, or ask Capi in the chat."
+    ]
+   ],
+   "owner": "Centre manager",
+   "staff": [
+    {
+     "id": "publicconsultationcentres0",
+     "name": "Officer desk 1",
+     "role": "Public consultations",
+     "qual": "Municipal services",
+     "exp": 12,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Officer desk 1"
+    },
+    {
+     "id": "publicconsultationcentres1",
+     "name": "Officer desk 2",
+     "role": "Grievances",
+     "qual": "Municipal services",
+     "exp": 9,
+     "langs": "English, Hindi, Telugu",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "svcs": null,
+     "first": "Officer desk 2"
+    }
+   ],
+   "services": [
+    {
+     "id": "publicconsultationcentrev0",
+     "g": "Consultations",
+     "name": "Public consultation",
+     "dur": 20,
+     "price": 0,
+     "desc": "Meet an officer about a civic issue.",
+     "kw": [
+      "public",
+      "consultation",
+      "public",
+      "consultations",
+      "public",
+      "consultation",
+      "grievance",
+      "complaint",
+      "officer",
+      "government",
+      "scheme"
+     ],
+     "staff": null
+    },
+    {
+     "id": "publicconsultationcentrev1",
+     "g": "Grievances",
+     "name": "Grievance filing help",
+     "dur": 20,
+     "price": 0,
+     "desc": "Help filing a complaint.",
+     "kw": [
+      "grievance",
+      "filing",
+      "help",
+      "public",
+      "consultations",
+      "public",
+      "consultation",
+      "grievance",
+      "complaint",
+      "officer",
+      "government",
+      "scheme"
+     ],
+     "staff": null
+    },
+    {
+     "id": "publicconsultationcentrev2",
+     "g": "Information",
+     "name": "Scheme information",
+     "dur": 15,
+     "price": 0,
+     "desc": "Eligibility and how to apply.",
+     "kw": [
+      "scheme",
+      "information",
+      "public",
+      "consultations",
+      "public",
+      "consultation",
+      "grievance",
+      "complaint",
+      "officer",
+      "government",
+      "scheme"
+     ],
+     "staff": null
+    },
+    {
+     "id": "publicconsultationcentrev3",
+     "g": "Consultations",
+     "name": "Senior citizen desk",
+     "dur": 20,
+     "price": 0,
+     "desc": "Priority help for seniors.",
+     "kw": [
+      "senior",
+      "citizen",
+      "desk",
+      "public",
+      "consultations",
+      "public",
+      "consultation",
+      "grievance",
+      "complaint",
+      "officer",
+      "government",
+      "scheme"
+     ],
+     "staff": null
+    }
+   ],
+   "offers": [],
+   "breaks": [
+    [
+     780,
+     840
+    ]
+   ],
+   "holidays": [],
+   "slotInt": 30,
+   "buffer": 0,
+   "dailyLimit": 40,
+   "autoConfirm": true,
+   "status": "active",
+   "verified": true,
+   "demo": true,
+   "plan": "Growth",
+   "q": {},
+   "login_email": "demo.publicc@appointly.demo"
+  }
+ ],
+ "categories": [
+  {
+   "id": "health",
+   "label": "Healthcare & Wellness",
+   "icon": "pulse",
+   "subs": [
+    {
+     "id": "hospitals",
+     "label": "Hospitals & clinics"
+    },
+    {
+     "id": "dental",
+     "label": "Dental clinics"
+    },
+    {
+     "id": "derma",
+     "label": "Dermatology"
+    },
+    {
+     "id": "physio",
+     "label": "Physiotherapy"
+    },
+    {
+     "id": "nutrition",
+     "label": "Nutritionists & dietitians"
+    }
+   ]
+  },
+  {
+   "id": "beauty",
+   "label": "Beauty & Personal Care",
+   "icon": "scissors",
+   "subs": [
+    {
+     "id": "salons",
+     "label": "Salons"
+    },
+    {
+     "id": "nails",
+     "label": "Nail studios"
+    },
+    {
+     "id": "makeup",
+     "label": "Makeup artists"
+    },
+    {
+     "id": "tattoo",
+     "label": "Tattoo studios"
+    }
+   ]
+  },
+  {
+   "id": "pro",
+   "label": "Professional Services",
+   "icon": "briefcase",
+   "subs": [
+    {
+     "id": "realestate",
+     "label": "Real estate agents"
+    },
+    {
+     "id": "insurance",
+     "label": "Insurance advisors"
+    },
+    {
+     "id": "consult",
+     "label": "Business consultants"
+    }
+   ]
+  },
+  {
+   "id": "fitness",
+   "label": "Fitness & Sports",
+   "icon": "lotus",
+   "subs": [
+    {
+     "id": "yoga",
+     "label": "Yoga studios"
+    },
+    {
+     "id": "pilates",
+     "label": "Pilates centres"
+    }
+   ]
+  },
+  {
+   "id": "hosp",
+   "label": "Hospitality & Events",
+   "icon": "party",
+   "subs": [
+    {
+     "id": "hotels",
+     "label": "Hotels & resorts"
+    },
+    {
+     "id": "banquet",
+     "label": "Banquet & party halls"
+    },
+    {
+     "id": "photo",
+     "label": "Photography studios"
+    }
+   ]
+  },
+  {
+   "id": "home",
+   "label": "Home & Repair Services",
+   "icon": "wrench",
+   "subs": [
+    {
+     "id": "maint",
+     "label": "Home maintenance"
+    },
+    {
+     "id": "cleaning",
+     "label": "Cleaning services"
+    },
+    {
+     "id": "electric",
+     "label": "Electricians"
+    },
+    {
+     "id": "plumb",
+     "label": "Plumbers"
+    },
+    {
+     "id": "ac",
+     "label": "AC technicians"
+    }
+   ]
+  },
+  {
+   "id": "gov",
+   "label": "Government & Public Services",
+   "icon": "landmark",
+   "subs": [
+    {
+     "id": "docs",
+     "label": "Document appointments"
+    },
+    {
+     "id": "passport",
+     "label": "Passport services"
+    },
+    {
+     "id": "publicc",
+     "label": "Public consultations"
+    }
+   ]
+  }
+ ],
+ "categoryRequests": [],
+ "bookings": [
+  {
+   "id": "APX-7K2Q9M",
+   "biz": "smilecaredental",
+   "svc": "smilecaredentalv1",
+   "staff": "smilecaredentals0",
+   "branch": null,
+   "start": 1794645000000,
+   "status": "confirmed",
+   "via": "AI chat",
+   "pay": "Pay at venue",
+   "client": {
+    "name": "Ananya Rao",
+    "phone": "98765 43210"
+   },
+   "mine": true,
+   "created": 1794213000000
+  },
+  {
+   "id": "APX-3HF8LD",
+   "biz": "stylestudiosalon",
+   "svc": "stylestudiosalonv0",
+   "staff": "stylestudiosalons0",
+   "branch": null,
+   "start": 1794915000000,
+   "status": "confirmed",
+   "via": "Booking link",
+   "pay": "UPI deposit ₹200",
+   "client": {
+    "name": "Ananya Rao",
+    "phone": "98765 43210"
+   },
+   "mine": true,
+   "created": 1794483000000
+  },
+  {
+   "id": "APX-9QW2ER",
+   "biz": "coolcareacservices",
+   "svc": "coolcareacservicesv0",
+   "staff": "coolcareacservicess0",
+   "branch": null,
+   "start": 1795082400000,
+   "status": "confirmed",
+   "via": "Appointly",
+   "pay": "Pay at venue",
+   "client": {
+    "name": "Ananya Rao",
+    "phone": "98765 43210"
+   },
+   "mine": true,
+   "created": 1794650400000,
+   "rescheduled": true
+  },
+  {
+   "id": "APX-5TY7UI",
+   "biz": "physiopluscentre",
+   "svc": "physiopluscentrev0",
+   "staff": "physiopluscentres1",
+   "branch": null,
+   "start": 1794160800000,
+   "status": "confirmed",
+   "via": "AI chat",
+   "pay": "Paid · Card",
+   "client": {
+    "name": "Ananya Rao",
+    "phone": "98765 43210"
+   },
+   "mine": true,
+   "created": 1793728800000
+  },
+  {
+   "id": "APX-2PL4MN",
+   "biz": "citycareclinic",
+   "svc": "citycareclinicv0",
+   "staff": "citycareclinics0",
+   "branch": null,
+   "start": 1792922400000,
+   "status": "confirmed",
+   "via": "Appointly",
+   "pay": "Paid · UPI",
+   "client": {
+    "name": "Ananya Rao",
+    "phone": "98765 43210"
+   },
+   "mine": true,
+   "created": 1792490400000,
+   "rated": 5
+  },
+  {
+   "id": "APX-8ZX6CV",
+   "biz": "zenyogastudio",
+   "svc": "zenyogastudiov0",
+   "staff": "zenyogastudios0",
+   "branch": null,
+   "start": 1793775600000,
+   "status": "cancelled",
+   "via": "Website widget",
+   "pay": "Pay at venue",
+   "client": {
+    "name": "Ananya Rao",
+    "phone": "98765 43210"
+   },
+   "mine": true,
+   "created": 1793343600000
+  },
+  {
+   "id": "APX-6BN3KJ",
+   "biz": "smilecaredental",
+   "svc": "smilecaredentalv0",
+   "staff": "smilecaredentals0",
+   "branch": null,
+   "start": 1790766000000,
+   "status": "confirmed",
+   "via": "Appointly",
+   "pay": "Paid · UPI",
+   "client": {
+    "name": "Ananya Rao",
+    "phone": "98765 43210"
+   },
+   "mine": true,
+   "created": 1790334000000,
+   "rated": 4
+  },
+  {
+   "id": "APX-4RQ8TB",
+   "biz": "smilecaredental",
+   "svc": "smilecaredentalv2",
+   "staff": "smilecaredentals1",
+   "branch": null,
+   "start": 1794823200000,
+   "status": "confirmed",
+   "via": "Website widget",
+   "pay": "Pay at venue",
+   "client": {
+    "name": "Ananya Rao",
+    "phone": "98765 43210"
+   },
+   "mine": true,
+   "created": 1794391200000,
+   "proposal": {
+    "by": "client",
+    "start": 1794913200000,
+    "staff": "smilecaredentals1",
+    "reason": "",
+    "at": 1794629856648
+   }
+  },
+  {
+   "id": "APX-C4NC3L",
+   "biz": "citycareclinic",
+   "svc": "citycareclinicv1",
+   "staff": "citycareclinics0",
+   "branch": null,
+   "start": 1794738600000,
+   "status": "cancelled",
+   "via": "Appointly",
+   "pay": "Pay at venue",
+   "client": {
+    "name": "Ananya Rao",
+    "phone": "98765 43210"
+   },
+   "mine": true,
+   "created": 1794306600000,
+   "cancelBy": "business",
+   "cancelReason": "Doctor on emergency leave"
+  },
+  {
+   "id": "APX-PR0P5D",
+   "biz": "physiopluscentre",
+   "svc": "physiopluscentrev1",
+   "staff": "physiopluscentres0",
+   "branch": null,
+   "start": 1794848400000,
+   "status": "confirmed",
+   "via": "AI chat",
+   "pay": "Pay at venue",
+   "client": {
+    "name": "Ananya Rao",
+    "phone": "98765 43210"
+   },
+   "mine": true,
+   "created": 1794416400000,
+   "proposal": {
+    "by": "business",
+    "start": 1795024800000,
+    "staff": "physiopluscentres0",
+    "reason": "Staff unavailable",
+    "at": 1794633456648
+   }
+  },
+  {
+   "id": "APX-N8LA2T",
+   "biz": "nailartstudio",
+   "svc": "nailartstudiov0",
+   "staff": "nailartstudios0",
+   "branch": null,
+   "start": 1795017600000,
+   "status": "confirmed",
+   "via": "Appointly",
+   "pay": "Pay at venue",
+   "client": {
+    "name": "Ananya Rao",
+    "phone": "98765 43210"
+   },
+   "mine": true,
+   "created": 1794585600000
+  },
+  {
+   "id": "APX-GL4M7U",
+   "biz": "glamupmakeup",
+   "svc": "glamupmakeupv0",
+   "staff": "glamupmakeups0",
+   "branch": null,
+   "start": 1795428000000,
+   "status": "confirmed",
+   "via": "Booking link",
+   "pay": "UPI deposit ₹500",
+   "client": {
+    "name": "Ananya Rao",
+    "phone": "98765 43210"
+   },
+   "mine": true,
+   "created": 1794996000000
+  },
+  {
+   "id": "APX-SL7FE2",
+   "biz": "securelifeadvisors",
+   "svc": "securelifeadvisorsv0",
+   "staff": "securelifeadvisorss0",
+   "branch": null,
+   "start": 1795174200000,
+   "status": "confirmed",
+   "via": "Appointly",
+   "pay": "Pay at venue",
+   "client": {
+    "name": "Ananya Rao",
+    "phone": "98765 43210"
+   },
+   "mine": true,
+   "created": 1794742200000
+  },
+  {
+   "id": "APX-CF3PL8",
+   "biz": "corefitpilates",
+   "svc": "corefitpilatesv0",
+   "staff": "corefitpilatess0",
+   "branch": null,
+   "start": 1794726000000,
+   "status": "confirmed",
+   "via": "Website widget",
+   "pay": "Pay at venue",
+   "client": {
+    "name": "Ananya Rao",
+    "phone": "98765 43210"
+   },
+   "mine": true,
+   "created": 1794294000000
+  },
+  {
+   "id": "APX-CH9BQ1",
+   "biz": "celebrationhalls",
+   "svc": "celebrationhallsv0",
+   "staff": "celebrationhallss0",
+   "branch": null,
+   "start": 1795863600000,
+   "status": "pending",
+   "via": "Appointly",
+   "pay": "Pay at venue",
+   "client": {
+    "name": "Ananya Rao",
+    "phone": "98765 43210"
+   },
+   "mine": true,
+   "created": 1795431600000
+  },
+  {
+   "id": "APX-SP2CL6",
+   "biz": "sparkleclean",
+   "svc": "sparklecleanv0",
+   "staff": "sparklecleans0",
+   "branch": null,
+   "start": 1795251600000,
+   "status": "confirmed",
+   "via": "Appointly",
+   "pay": "Pay at venue",
+   "client": {
+    "name": "Ananya Rao",
+    "phone": "98765 43210"
+   },
+   "mine": true,
+   "created": 1794819600000
+  },
+  {
+   "id": "APX-DH5DC3",
+   "biz": "documenthelpcentre",
+   "svc": "documenthelpcentrev0",
+   "staff": "documenthelpcentres0",
+   "branch": null,
+   "start": 1794911400000,
+   "status": "confirmed",
+   "via": "Appointly",
+   "pay": "Pay at venue",
+   "client": {
+    "name": "Ananya Rao",
+    "phone": "98765 43210"
+   },
+   "mine": true,
+   "created": 1794479400000
+  },
+  {
+   "id": "APX-PP8NT4",
+   "biz": "primeproperties",
+   "svc": "primepropertiesv0",
+   "staff": "primepropertiess0",
+   "branch": null,
+   "start": 1793962800000,
+   "status": "confirmed",
+   "via": "Booking link",
+   "pay": "Paid · UPI",
+   "client": {
+    "name": "Ananya Rao",
+    "phone": "98765 43210"
+   },
+   "mine": true,
+   "created": 1793530800000
+  },
+  {
+   "id": "APX-HF6MX9",
+   "biz": "homefixservices",
+   "svc": "homefixservicesv0",
+   "staff": "homefixservicess0",
+   "branch": null,
+   "start": 1793354400000,
+   "status": "confirmed",
+   "via": "Appointly",
+   "pay": "Paid · Cash",
+   "client": {
+    "name": "Ananya Rao",
+    "phone": "98765 43210"
+   },
+   "mine": true,
+   "created": 1792922400000
+  },
+  {
+   "id": "APX-GS1RT5",
+   "biz": "grandstayresort",
+   "svc": "grandstayresortv0",
+   "staff": "grandstayresorts0",
+   "branch": null,
+   "start": 1792072800000,
+   "status": "confirmed",
+   "via": "Website widget",
+   "pay": "Paid · Card",
+   "client": {
+    "name": "Ananya Rao",
+    "phone": "98765 43210"
+   },
+   "mine": true,
+   "created": 1791640800000,
+   "rated": 5
+  }
+ ],
+ "notifications": [
+  {
+   "id": "n1",
+   "to": "client",
+   "type": "reminder",
+   "title": "Reminder: Cleaning & polish today",
+   "body": "SmileCare Dental · with Dr. Meera Iyer",
+   "at": 1794633456648,
+   "read": false
+  },
+  {
+   "id": "n0",
+   "to": "client",
+   "type": "rescheduled",
+   "title": "PhysioPlus Centre proposed a new time",
+   "body": "Back & neck pain program · Staff unavailable. Accept or decline in My bookings.",
+   "at": 1794633456648,
+   "read": false
+  },
+  {
+   "id": "n0b",
+   "to": "client",
+   "type": "cancelled",
+   "title": "CityCare Clinic cancelled your booking",
+   "body": "Doctor on emergency leave. Pick another time or a similar clinic.",
+   "at": 1794626256648,
+   "read": false
+  },
+  {
+   "id": "n0c",
+   "to": "smilecaredental",
+   "type": "request",
+   "title": "Reschedule request",
+   "body": "Ananya Rao wants to move her appointment",
+   "at": 1794629856648,
+   "read": false
+  },
+  {
+   "id": "n2",
+   "to": "client",
+   "type": "rescheduled",
+   "title": "Appointment rescheduled",
+   "body": "CoolCare AC Services moved your AC service to Thu, 19 Nov, 10:00 AM",
+   "at": 1794629856648,
+   "read": false
+  },
+  {
+   "id": "n3",
+   "to": "client",
+   "type": "offer",
+   "title": "20% off teeth whitening",
+   "body": "SmileCare Dental · ends in 20 days",
+   "at": 1794619056648,
+   "read": false
+  },
+  {
+   "id": "n4",
+   "to": "client",
+   "type": "followup",
+   "title": "Time for a follow-up?",
+   "body": "PhysioPlus Centre suggests a session this week",
+   "at": 1794550656648,
+   "read": true
+  },
+  {
+   "id": "n5",
+   "to": "client",
+   "type": "cancelled",
+   "title": "Booking cancelled",
+   "body": "ZenYoga Studio · Group yoga class",
+   "at": 1793773056648,
+   "read": true
+  },
+  {
+   "id": "n6",
+   "to": "client",
+   "type": "payment",
+   "title": "Payment received · ₹900",
+   "body": "PhysioPlus Centre · Physiotherapy session",
+   "at": 1794118656648,
+   "read": true
+  }
+ ],
+ "favorites": [
+  "smilecaredental",
+  "stylestudiosalon",
+  "zenyogastudio"
+ ],
+ "reviews": [
+  {
+   "biz": "citycareclinic",
+   "r": 5,
+   "text": "Quick and thorough. Dr. Vikram explained everything clearly.",
+   "at": 1792995456648
+  }
+ ],
+ "profile": {
+  "email": "ananya.rao@example.com",
+  "city": "Hyderabad",
+  "area": "Kondapur",
+  "lang": "English",
+  "wa": true,
+  "sms": true,
+  "em": false,
+  "r24": true,
+  "r2": true
+ },
+ "demoClient": {
+  "name": "Ananya Rao",
+  "phone": "9876543210"
+ }
+}

@@ -1,3 +1,9 @@
+.env
+.env.txt
+__pycache__/
+.pytest_cache/
+.venv/
+server/*.db
 .DS_Store
 Thumbs.db
 node_modules/

@@ -1,6 +1,9 @@
 /* Appointly – front-end prototype
    All app logic: data, availability engine, views, router, actions and Capi assistant.
-   Data is stored in the browser (localStorage), so no server is needed. */
+   Two modes:
+   - On its own (e.g. GitHub Pages): data is stored in the browser (localStorage).
+   - Served by the FastAPI server: js/api.js loads the data from the API first (BOOT) and
+     every save is sent to the server (ApiSync). Logins are checked by the server. */
 /* ================= helpers ================= */
 const $=s=>document.querySelector(s);
 const ICON={
@@ -220,11 +223,12 @@ function seedDB(){
    favs:['smilecaredental','stylestudiosalon','zenyogastudio'],myReviews:[{biz:'citycareclinic',r:5,text:'Quick and thorough. Dr. Vikram explained everything clearly.',at:Date.now()-19*864e5}],
    profile:{email:'ananya.rao@example.com',city:'Hyderabad',area:'Kondapur',lang:'English',wa:true,sms:true,em:false,r24:true,r2:true}};
 }
-let DB=load(DBK,null);if(!DB||DB.ver!==4)DB=seedDB();
-const saveDB=()=>save(DBK,DB);
-let AUTH=load(LSA,{client:null,business:null,admin:null});
-const saveAuth=()=>save(LSA,AUTH);
-const BIZ={};SEED_BIZ.forEach(b=>BIZ[b.id]=b);Object.assign(BIZ,DB.biz);
+const BOOT=window.__APPOINTLY_BOOT||null;
+let DB=BOOT?BOOT.db:load(DBK,null);if(!DB||DB.ver!==4)DB=seedDB();
+const saveDB=()=>BOOT?ApiSync.schedule():save(DBK,DB);
+let AUTH=BOOT?BOOT.auth:load(LSA,{client:null,business:null,admin:null});
+const saveAuth=()=>BOOT?ApiSync.authChanged():save(LSA,AUTH);
+const BIZ={};(BOOT?BOOT.businesses:SEED_BIZ).forEach(b=>BIZ[b.id]=b);if(!BOOT)Object.assign(BIZ,DB.biz);
 let BOOKINGS=DB.bookings;const saveBookings=saveDB;
 function saveBiz(b){BIZ[b.id]=b;DB.biz[b.id]=b;saveDB()}
 function prepBiz(b){b.staff.forEach(s=>s.first=/^(Counter|Officer|Front|Spa|Shine)/.test(s.name)?s.name:s.name.replace(/^(Dr\.|Coach)\s*/,'').split(/[ ,]/)[0]);if(!b.branches||!b.branches.length)b.branches=[b.area]}
@@ -420,7 +424,7 @@ function confetti(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)re
    d.animate([{transform:'translate(0,0) rotate(0)',opacity:1},{transform:`translate(${dx*.6}px,${dy}px) rotate(${360*Math.random()}deg)`,opacity:1,offset:.45},{transform:`translate(${dx}px,${dy+760}px) rotate(${720*Math.random()}deg)`,opacity:0}],{duration:1700+Math.random()*900,easing:'cubic-bezier(.2,.6,.4,1)'}).onfinish=()=>d.remove()}}
 function appyCelebrate(){appyMood('.appy-launch .appy, .chat-head .appy, .modal .appy, .chat-intro .appy','celebrate',2600);confetti()}
 const BUBBLE={'c-home':'Hey! I’m Capi. Tell me what you need and I’ll find a slot!',explore:'Psst! Describe it to me and I’ll sniff out the right place.','c-calendar':'Need to move a booking? I’ve got you!',register:'Ooh, a new business! I’ll help you set up.','client-login':'Hi friend! Log in or just look around.',home:'Hey! I’m Capi. Let me find the perfect slot for you!',discover:'Psst! Tell me what you need and I’ll sniff out a slot.',biz:'Hey! I’m Capi. Let me find the perfect slot for you!',site:'Hi there! Want me to grab you a slot?',manage:'Need to move a booking? I’ve got you!',dashboard:'Hi boss! Ask me “how many clients today?”','business-login':'New here? I’ll show you around!'};
-function renderLauncher(){const el=$('#launch');if(S.drawer||['chat','admin','admin-login'].includes(S.view)){el.innerHTML='';return}
+function renderLauncher(){const el=$('#launch');if(window.CAPI_COMPANION){el.innerHTML='';if(window.CapiCompanion)CapiCompanion.onRoute();return}if(S.drawer||['chat','admin','admin-login'].includes(S.view)){el.innerHTML='';return}
   const msg=BUBBLE[S.view]||'Hey! I’m Capi, your little appointment buddy!';const show=!S.bubbleSeen||!S.bubbleSeen[S.view];
   el.innerHTML=`<div class="appy-launch">${show?`<div class="appy-bubble" id="appybubble" data-a="appyOpen"><button class="x" data-a="hideBubble" aria-label="Dismiss">${ic('x')}</button><b>Capi</b>${esc(msg)}</div>`:''}<button class="appy-btn" data-a="appyOpen" aria-label="Chat with Capi, the AI assistant"><span class="appy-wrap">${appySVG('full')}</span><span class="appy-name">Ask Capi</span></button></div>`;
   setTimeout(()=>appyMood('.appy-launch .appy','wave',2700),600);
@@ -446,7 +450,7 @@ function handleHelp(text){
   else if(/cancel|reschedul|my booking|change/.test(s))r=`Use the link in your WhatsApp confirmation, or manage it here. Free changes are allowed until the business’s cancellation window.<div class="opts">${go('Manage my booking','nav','manage')}</div>`;
   else if(/staff|employee|team member/.test(s))r=AUTH.business?`Each person gets their own hours, services and calendar column.<div class="opts">${go('Open Staff','dashGo','staff')}</div>`:'Each staff member gets their own hours, services and calendar column. Staff see only their branch and role.';
   else if(/remind|whatsapp|no.?show/.test(s))r='I send WhatsApp reminders 24 hours and 2 hours before each visit. Businesses on Appointly see far fewer no-shows.';
-  else if(/how|work|what is|what does/.test(s))r=`Customers book on your website, your booking link or WhatsApp, by picking a time or chatting with me. I check live availability, confirm on WhatsApp and drop it into your calendar. They never need an app or an account.<div class="opts">${go('See how it works','helpScroll','channels')}${go('Pricing','say','Pricing')}</div>`;
+  else if(/how|work|what is|what does/.test(s))r=`Customers book on your website, your booking link or WhatsApp, by picking a time or chatting with me. I check live availability, confirm on WhatsApp and drop it into your calendar. They never need an app or an account.<div class="opts">${go('Pricing','say','Pricing')}</div>`;
   else if(/book|appointment|dentist|doctor|haircut|massage|salon|spa|gym/.test(s))r=`Happy to help! What kind of place?<div class="opts">${DB.cats.map(c=>go(c.label,'goCat',c.id)).join('')}</div>`;
   else if(/capybara|who are you|your name|appy|tangerine|orange|cute/.test(s)){r='I’m Capi, your little appointment buddy! Capybaras are the calmest animals around, so I never panic when the phone keeps ringing. The tangerine? It’s my lucky hat.';setTimeout(()=>appyMood('.chat-head .appy, .appy-launch .appy','happy',1600),800)}
   else if(/thank|great|awesome|love/.test(s)){r='Aww, anytime! I’ll be right here in the corner if you need me.';setTimeout(()=>appyMood('.chat-head .appy','celebrate',1800),800)}
@@ -485,7 +489,7 @@ function renderTop(){
   else if(p==='booking'){const b=S.arg?BIZ[S.arg]:null;
     if(b)left=`<a class="logo" href="#book-${b.id}" style="font-size:18px">${logo(b,36)}<span style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(b.name)}</span></a>`;
     right=`${CUR()?`<a class="btn sm" href="#dashboard">${ic('chart')}<span class="hide-sm">Back to dashboard</span></a>`:''}<a class="btn ghost sm" href="#c-calendar">${ic('calendar')}<span class="hide-sm">My bookings</span></a><span class="pill hide-sm">Powered by Appointly</span>`}
-  else{nav=`<nav class="nav"><a href="#home" data-a="scrollTo" data-v="channels">How it works</a><a href="#home" data-a="scrollTo" data-v="biz-features">Features</a><a href="#home" data-a="scrollTo" data-v="pricing">Pricing</a><a href="#explore" data-a="clientEntry">Explore</a></nav>`;
+  else{nav=`<nav class="nav"><a href="#home" data-a="scrollTo" data-v="biz-features">Features</a><a href="#home" data-a="scrollTo" data-v="pricing">Pricing</a><a href="#explore" data-a="clientEntry">Explore</a></nav>`;
     right=CUR()?`<a class="btn sm primary" href="#dashboard">${ic('chart')}My dashboard</a>`:`<a class="btn ghost sm" href="#client-login" data-a="clientEntry">Client</a><a class="btn sm primary" href="#business-login">Business</a>`}
   $('#topbar').innerHTML=`${left}${nav}<span class="spacer"></span>${right}`;
 }
@@ -527,14 +531,6 @@ function vHome(){
  </div></section>
 
  <div class="marquee" aria-hidden="true"><span class="track">Book in seconds ✦ No app or account for your customers ✦ An AI assistant that speaks their language ✦ One calendar for every channel ✦ Reminders on WhatsApp ✦ Book in seconds ✦ No app or account for your customers ✦ An AI assistant that speaks their language ✦ One calendar for every channel ✦ Reminders on WhatsApp ✦ Book in seconds ✦ No app or account for your customers ✦ An AI assistant that speaks their language ✦ One calendar for every channel ✦ Reminders on WhatsApp ✦ Book in seconds ✦ No app or account for your customers ✦ An AI assistant that speaks their language ✦ One calendar for every channel ✦ Reminders on WhatsApp ✦ </span></div>
- <section class="band" id="channels" style="background:var(--surface);border-block:1px solid var(--line)"><div class="wrap">
-  <div class="sec-head"><span class="eyebrow">How it works</span><h2>Customers book where they already find you</h2><p>They never need to visit Appointly. Every channel checks the same live availability and lands in the same calendar.</p></div>
-  <div class="flow">
-   <div class="flow-col">${ins.map(([i,t,d])=>`<div class="flow-item in"><span class="ic">${ic(i)}</span><div><b>${t}</b><div class="muted" style="font-size:13px">${d}</div></div></div>`).join('')}</div>
-   <div class="flow-hub"><span class="logo-mark" style="width:52px;height:52px;border-radius:16px">${ic('calendar')}</span><b style="font-family:var(--f-display);font-size:22px">Appointly</b><span style="font-size:13.5px;opacity:.8">Checks live availability, applies your rules, confirms on WhatsApp</span><span class="pill live" style="background:rgba(255,255,255,.14);color:#FFD7DD">Syncing</span></div>
-   <div class="flow-col">${outs.map(([i,t,d])=>`<div class="flow-item out"><span class="ic">${ic(i)}</span><div><b>${t}</b><div class="muted" style="font-size:13px">${d}</div></div></div>`).join('')}</div>
-  </div>
- </div></section>
 
  <section class="band"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">What your customers see</span><h2>Two ways to book, on your own page</h2><p>No download and no sign-up. They confirm their mobile number once with a code, and that’s it.</p></div>
@@ -600,9 +596,14 @@ function runDemo(){
 
 /* ================= AUTH ================= */
 const FCARDS=[['Ananya R.','Cleaning · 4:30 PM','AI chat'],['Rohit K.','Haircut · 11:00 AM','Website'],['Meher A.','Deep tissue · 6:00 PM','WhatsApp'],['Dev C.','OPD consult · 9:15 AM','Booking link'],['Isha V.','Gel manicure · 3:30 PM','AI chat'],['Kabir S.','PT session · 7:00 AM','Website'],['Tara M.','Root canal · 10:30 AM','Google'],['Neil K.','GST review · 2:00 PM','AI chat']];
+function citrusSky(){
+  const bubbles=[[6,14,16,-2,18],[14,30,19,-9,-14],[22,10,13,-5,10],[31,22,21,-13,16],[40,8,12,-1,-8],[48,34,24,-17,22],[57,12,15,-7,-12],[64,20,18,-3,14],[72,9,12,-10,-10],[79,28,22,-6,20],[86,14,16,-14,-16],[93,18,20,-4,12],[36,40,26,-20,-18],[68,44,28,-24,24]];
+  return `<div class="citrus-sky" aria-hidden="true"><div class="photo"></div><div class="sweep"></div>
+   ${bubbles.map(([l,sz,d,dl,x])=>`<i class="bub" style="left:${l}%;width:${sz}px;height:${sz}px;--d:${d}s;--dl:${dl}s;--x:${x}px"></i>`).join('')}<div class="tint"></div></div>`;
+}
 function wallpaper(){
   const rows=[['9:30','Ananya R. · Cleaning',''],['11:00','Rohit K. · Consultation','p'],['4:30','Meher A. · Whitening','']];
-  return `<div class="calm" aria-hidden="true"><i></i><i></i><i></i></div><div class="wavyblob" aria-hidden="true" style="inset:auto;width:440px;height:440px;right:-120px;top:30px;opacity:.28;z-index:-1"></div><span class="spark" style="right:14%;top:8%" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"/></svg></span><span class="spark o" style="left:62%;top:52%;width:18px;height:18px;animation-delay:-1.2s" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"/></svg></span>
+  return `${citrusSky()}<span class="spark" style="right:14%;top:8%" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"/></svg></span><span class="spark o" style="left:62%;top:52%;width:18px;height:18px;animation-delay:-1.2s" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"/></svg></span>
    <div class="wscene" aria-hidden="true">
     <div class="wcard w1"><div class="row" style="justify-content:space-between"><b>Today</b><span style="background:#FCECEE;color:#DB586D;padding:2px 9px;border-radius:999px;font-weight:700">8 visits</span></div>${rows.map(([t,n,c])=>`<div class="slotline ${c}"><b>${t}</b>${n}</div>`).join('')}</div>
     <div class="wcard w2">${botAv(BIZ.smilecaredental,32)}<div><b>Capi booked a visit</b><span>Sat · 4:30 PM · from your website</span></div></div>
@@ -764,7 +765,11 @@ function regPublish(){const d=S.reg.d;
    rating:0,reviews:0,open:toMin(d.open),close:toMin(d.close),sun:d.days.includes(0)?[toMin(d.open),toMin(d.close)]:null,cancelHrs:6,since:new Date().getFullYear(),bot:'Capi',branches:[d.area.trim()],about:d.desc||`${d.name} on Appointly.`,amen:AMEN[cat]||AMEN.pro,insurance:[],faqs:[],owner:d.owner,staff,
    services:d.svcs.filter(s=>s.name.trim()).map((s,i)=>({id:id+'v'+i,g:'Services',name:s.name.trim(),desc:s.desc||'',price:+s.price||0,dur:+s.dur||30,kw:kwOf(s.name),avail:s.avail})),offers:[],breaks:[[toMin(d.brS),toMin(d.brE)]].filter(([a,z])=>z>a),holidays:d.holidays.map(x=>{const t=new Date(x);return dkey(t)}),slotInt:+d.slotInt||30,buffer:0,dailyLimit:40,autoConfirm:true,
    status:d.publish==='now'?'active':'pending',verified:false,demo:false,plan:'Growth',q:d.q,workDays:d.days};
-  b.subName=d.newSub;prepBiz(b);saveBiz(b);
+  b.subName=d.newSub;prepBiz(b);
+  if(BOOT){const pw=b.password;delete b.password;S.reg.err='';const keepCats=JSON.parse(JSON.stringify(DB.cats)),keepReq=JSON.parse(JSON.stringify(DB.catReq));
+    ApiAuth.registerBusiness(b,b.email,pw,d.owner).then(r=>{const nb=BIZ[r.business.id]||b;DB.cats.splice(0,DB.cats.length,...keepCats);DB.catReq.splice(0,DB.catReq.length,...keepReq);saveDB();regPublishDone(nb,d,cat)}).catch(x=>{S.reg.err=esc(x.message);render()});return}
+  saveBiz(b);regPublishDone(b,d,cat)}
+function regPublishDone(b,d,cat){
   notify('admin','newbiz',d.publish==='now'?'New business published':'Business awaiting verification',`${b.name} · ${catLabel(cat)} › ${subLabel(b)}`);
   AUTH.business={id:b.id,name:d.owner,role:'Owner'};saveAuth();S.reg=null;S.dash='overview';location.hash='dashboard';
   setTimeout(()=>{toast(d.publish==='now'?`${esc(b.name)} is live! Customers can find it in Explore.`:'Submitted. We’ll email you once it’s verified.','check');appyCelebrate()},300);
@@ -1405,7 +1410,7 @@ function lightbox(i){const b=BIZ[S.arg];const k=PHOTOS[i];
   modal(`<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photos"><div class="row" style="justify-content:space-between;padding:12px 16px"><b>${esc(b.name)} · ${esc(photoCap(b,k[0],k[1]))}</b><button class="btn ghost sm" data-a="closeModal" aria-label="Close">${ic('x')}</button></div><div class="stagebox">${scene(b,k[0])}</div><div class="thumbs">${PHOTOS.map(([kk,c],j)=>`<button class="${i===j?'on':''}" data-a="photo" data-v="${j}" aria-label="${esc(photoCap(b,kk,c))}">${scene(b,kk)}</button>`).join('')}</div></div>`,true)}
 function findAppt(id){return AIDX.get(id)||(BOOKINGS.find(k=>k.id===id)?dbAsAppt(BOOKINGS.find(k=>k.id===id)):null)}
 function setAppt(a,status){const b=BIZ[a.biz];
-  if(a.src==='db'){const k=BOOKINGS.find(x=>x.id===a.id);if(status==='noshow'){k.status='cancelled';k.noshow=true}else k.status=status;if(k.mine)notify('client',status==='confirmed'?'confirm':'cancelled',status==='confirmed'?`Booking confirmed · ${k.id}`:`Booking ${status==='noshow'?'marked as no-show':'cancelled'}`,`${svcOf(k).name} at ${b.name} · ${fmtD(new Date(k.start))}`)}
+  if(a.src==='db'){const k=BOOKINGS.find(x=>x.id===a.id);if(status==='noshow'){k.status='cancelled';k.noshow=true}else k.status=status;if(k.mine||k.online)notify('client',status==='confirmed'?'confirm':'cancelled',status==='confirmed'?`Booking confirmed · ${k.id}`:`Booking ${status==='noshow'?'marked as no-show':'cancelled'}`,`${svcOf(k).name} at ${b.name} · ${fmtD(new Date(k.start))}`)}
   else{DB.appt[a.id]=Object.assign(DB.appt[a.id]||{},{status:status==='noshow'?'cancelled':status})}
   saveDB();toast(status==='confirmed'?`Accepted. ${esc(firstName(a.customer))} has been notified.`:status==='noshow'?'Marked as no-show.':`Cancelled. ${esc(firstName(a.customer))} has been notified and the slot is free again.`,status==='confirmed'?'check':'x')}
 function timeOpts(b,staff,date,dur,ignore,sel){const h=hoursOn(b,date);if(!h)return '<option value="">Closed this day</option>';const o=[];for(let m=h[0];m+dur<=h[1];m+=(b.slotInt||30)){if(isFree(b,staff,date,m,dur,ignore))o.push(`<option value="${m}" ${sel===m?'selected':''}>${fmtT(m)}</option>`)}return o.join('')||'<option value="">No free times</option>'}
@@ -1482,7 +1487,7 @@ const ACT={
  pset(v){DB.profile[v]=!DB.profile[v];saveDB();render()},
  copy(v){const done=()=>toast(`Copied ${esc(v.length>60?v.slice(0,57)+'…':v)}`,'copy');try{navigator.clipboard.writeText(v).then(done,()=>toast(`Copy this: ${esc(v)}`,'copy'))}catch(e){toast(`Copy this: ${esc(v)}`,'copy')}},
  loginBack(){S.login.step='phone';S.login.err='';refreshLogin()},
- useDemo(v){const b=BIZ[v];AUTH.business={id:b.id,name:b.owner,role:'Owner'};saveAuth();S.dash='overview';toast(`Logged in to ${esc(b.name)} (demo)`,'check');location.hash='dashboard'},
+ useDemo(v){if(BOOT){ApiAuth.demoBusiness(v).then(u=>{AUTH.business=u;saveAuth();S.dash='overview';toast(`Logged in to ${esc(BIZ[v].name)} (demo)`,'check');if(location.hash==='#dashboard')render();else location.hash='dashboard'}).catch(x=>toast(esc(x.message),'x'));return}const b=BIZ[v];AUTH.business={id:b.id,name:b.owner,role:'Owner'};saveAuth();S.dash='overview';toast(`Logged in to ${esc(b.name)} (demo)`,'check');location.hash='dashboard'},
  logout(v){AUTH[v]=null;saveAuth();toast('Logged out','logout');if(v==='client'){S.login={step:'phone',phone:'',name:'',err:''};S.clientMode=false;if(location.hash==='#home')render();else location.hash='home';return}location.hash=v==='business'?'business-login':'admin-login'},
  /* register */
  regBack(){regCollect();S.reg.err='';S.reg.step--;render()},
@@ -1560,9 +1565,13 @@ document.addEventListener('submit',e=>{const f=e.target;e.preventDefault();const
     if(p.length!==10){S.login.err='Enter a 10-digit mobile number.';refreshLogin();return}
     if(cons&&!cons.checked){S.login.err='Please allow booking messages so we can send your confirmation.';refreshLogin();return}
     S.login={...S.login,step:'code',phone:p.replace(/(\d{5})(\d{5})/,'$1 $2'),err:''};refreshLogin();toast('Code sent on WhatsApp and SMS','whatsapp')}
+  if(f.id==='otpform'&&BOOT){const btn=f.querySelector('[type=submit]');if(btn)btn.disabled=true;ApiAuth.client(S.login.phone,$('#otp').value.trim(),S.login.name).then(u=>loginClient(u.name,u.phone)).catch(x=>{S.login.err=esc(x.message);refreshLogin()});return}
   if(f.id==='otpform'){if($('#otp').value.trim()!=='123456'){S.login.err='That code is not right. Check the message and try again.';refreshLogin();return}loginClient(S.login.name||(AUTH.client&&AUTH.client.name)||'Ananya Rao',S.login.phone)}
+  if(f.id==='bizform'&&BOOT){const em=val('be').trim().toLowerCase(),pw=val('bp');S.blogin={email:em,pw:''};if(!em||!pw){S.blogin.err='Enter your email and password.';render();return}
+    ApiAuth.business(em,pw).then(u=>{AUTH.business=u;saveAuth();S.blogin={};S.dash='overview';toast(`Welcome back, ${esc(firstName(u.name))}`,'check');if(location.hash==='#dashboard')render();else location.hash='dashboard'}).catch(x=>{S.blogin.err=esc(x.message);render()});return}
   if(f.id==='bizform'){const em=val('be').trim().toLowerCase(),pw=val('bp');const biz=Object.values(BIZ).find(x=>x.email.toLowerCase()===em);S.blogin={email:em,pw:''};
     if(!biz||biz.password!==pw){S.blogin.err='Email or password is incorrect.';render();return}AUTH.business={id:biz.id,name:biz.owner,role:'Owner'};saveAuth();S.blogin={};S.dash='overview';toast(`Welcome back, ${esc(firstName(biz.owner))}`,'check');location.hash='dashboard'}
+  if(f.id==='adminform'&&BOOT){ApiAuth.admin(val('ae').trim(),val('ap'),val('a2').trim()).then(u=>{S.aerr='';AUTH.admin=u;saveAuth();if(location.hash==='#admin')render();else location.hash='admin'}).catch(x=>{S.aerr=esc(x.message);render()});return}
   if(f.id==='adminform'){if(val('ap')!=='Appointly@Admin'||val('a2')!=='123456'){S.aerr='Password or authenticator code is incorrect.';render();return}S.aerr='';AUTH.admin={email:val('ae')};saveAuth();location.hash='admin'}
   if(f.id==='profform'){AUTH.client.name=val('pf-name').trim()||AUTH.client.name;saveAuth();DB.profile.email=val('pf-email');DB.profile.area=val('pf-area');saveDB();render();toast('Profile saved','check')}
   if(f.id==='reschform'){const t=+val('rs-time');if(!val('rs-time'))return toast('Pick an available time.','x');const day=+val('rs-day');const{kind,a}=S.rs;const d=addDays(TODAY,day);d.setHours(0,t,0,0);proposeResched(kind,a,d,t)}
@@ -1671,9 +1680,9 @@ function proposeResched(kind,a,d,t){const bb=BIZ[a.biz];const reason=kind==='biz
   else{DB.appt[a.id]={status:'moved'};k={id:a.bid,biz:a.biz,svc:a.svcId,staff:a.staff,branch:bb.branches[0],start:a.date+a.start*6e4,status:a.status==='pending'?'pending':'confirmed',via:a.source,pay:'Pay at venue',client:{name:a.customer,phone:a.phone.replace('+91 ','')},mine:false,created:Date.now()};BOOKINGS.push(k)}
   k.proposal={by:kind==='biz'?'business':'client',start:d.getTime(),staff:k.staff,reason,at:Date.now()};saveDB();
   const when=`${fmtD(d)}, ${fmtT(t)}`;
-  if(kind==='biz'){if(k.mine)notify('client','rescheduled',`${bb.name} proposed a new time`,`${svcOf(k).name} · ${when}${reason?' · '+reason:''}. Accept or decline in My bookings.`);
+  if(kind==='biz'){if(k.mine||k.online)notify('client','rescheduled',`${bb.name} proposed a new time`,`${svcOf(k).name} · ${when}${reason?' · '+reason:''}. Accept or decline in My bookings.`);
     closeModal();toast(`New time sent to ${esc(firstName(k.client.name))}. It moves once they accept.`,'refresh');
-    if(!k.mine)setTimeout(()=>{const kk=BOOKINGS.find(x=>x.id===k.id);if(kk&&kk.proposal&&kk.proposal.by==='business'){applyProposal(kk);toast(`${esc(firstName(kk.client.name))} accepted the new time.`,'check');if(S.view==='dashboard'&&!$('.scrim'))redash()}},9000)}
+    if(!k.mine&&!k.online)setTimeout(()=>{const kk=BOOKINGS.find(x=>x.id===k.id);if(kk&&kk.proposal&&kk.proposal.by==='business'){applyProposal(kk);toast(`${esc(firstName(kk.client.name))} accepted the new time.`,'check');if(S.view==='dashboard'&&!$('.scrim'))redash()}},9000)}
   else{notify(bb.id,'request','Reschedule request',`${k.client.name} · ${svcOf(k).name} · wants ${when}`);closeModal();toast(`Request sent to ${esc(bb.name)}. We’ll tell you when they reply.`,'clock')}
   if(S.view==='dashboard')redash();else render()}
 function applyProposal(k){const p=k.proposal;const b=BIZ[k.biz];const d=new Date(p.start);const m=d.getHours()*60+d.getMinutes();
@@ -1684,18 +1693,18 @@ Object.assign(ACT,{
   aSet(v){const[id,st]=v.split('|');const a=findAppt(id);if(!a)return;if(st==='cancelled')return bizCancelModal(a);closeModal();setAppt(a,st);redash()},
   bCancelGo(v){const a=findAppt(v);if(!a)return;const b=BIZ[a.biz];const reason=($('#bc-reason')||{}).value||'Staff unavailable';
     if(a.src==='db'){const k=BOOKINGS.find(x=>x.id===a.id);k.status='cancelled';k.cancelBy='business';k.cancelReason=reason;delete k.proposal;
-      if(k.mine)notify('client','cancelled',`${b.name} cancelled your booking`,`${svcOf(k).name} · ${fmtD(new Date(k.start))} · ${reason}. Tap My bookings to pick another time.`)}
+      if(k.mine||k.online)notify('client','cancelled',`${b.name} cancelled your booking`,`${svcOf(k).name} · ${fmtD(new Date(k.start))} · ${reason}. Tap My bookings to pick another time.`)}
     else DB.appt[a.id]=Object.assign(DB.appt[a.id]||{},{status:'cancelled',cancelBy:'business',cancelReason:reason});
     saveDB();closeModal();toast(`Cancelled. ${esc(firstName(a.customer))} got rebooking options.`,'x');redash()},
   propAccept(v){const k=BOOKINGS.find(x=>x.id===v);if(!k||!k.proposal)return;const by=k.proposal.by;const b=BIZ[k.biz];const t=propTxt(k.proposal);
     if(!applyProposal(k))return toast('That time was just taken. Suggest another one.','x');
     if(by==='business'){notify(b.id,'rescheduled','Customer accepted new time',`${k.client.name} · ${svcOf(k).name} · ${t}`);notify('client','confirm','New time confirmed',`${svcOf(k).name} at ${b.name} · ${t}`)}
-    else if(k.mine)notify('client','confirm',`${b.name} approved your new time`,`${svcOf(k).name} · ${t}`);
+    else if(k.mine||k.online)notify('client','confirm',`${b.name} approved your new time`,`${svcOf(k).name} · ${t}`);
     closeModal();toast(`Moved to ${t}. Both sides notified.`,'check');appyCelebrate();if(S.view==='dashboard')redash();else render()},
   propDecline(v){const k=BOOKINGS.find(x=>x.id===v);if(!k||!k.proposal)return;const by=k.proposal.by;const b=BIZ[k.biz];const mine=S.view!=='dashboard';delete k.proposal;saveDB();
     const msg=(by==='business')===mine?'declined':'withdrawn';
     if(by==='business'&&mine)notify(b.id,'cancelled','Customer kept the original time',`${k.client.name} · ${svcOf(k).name} · ${fmtD(new Date(k.start))}`);
-    if(by==='client'&&!mine&&k.mine)notify('client','cancelled',`${b.name} couldn’t move your booking`,`${svcOf(k).name} stays on ${fmtD(new Date(k.start))}. You can request another time.`);
+    if(by==='client'&&!mine&&(k.mine||k.online))notify('client','cancelled',`${b.name} couldn’t move your booking`,`${svcOf(k).name} stays on ${fmtD(new Date(k.start))}. You can request another time.`);
     closeModal();toast(msg==='declined'?'Declined. The original time stays.':'Request withdrawn. The original time stays.','refresh');if(S.view==='dashboard')redash();else render()},
   rbSame(v){const[bid,d,m,kid]=v.split('|');const b=BIZ[bid];const old=BOOKINGS.find(x=>x.id===kid);const date=addDays(TODAY,+d);const st=freeStaff(b,'any',date,+m,kDur(old));if(!st)return toast('That slot was just taken.','x');
     const made=createBooking({b,svcId:old.svc,staff:st,date,m:+m,via:'Appointly',pay:old.pay||'Pay at venue'});old.rebooked=made[0].id;saveDB();closeModal();appyCelebrate();toast(`Rebooked · <b class="mono">${made[0].id}</b><br>${relD(date)}, ${fmtT(+m)} at ${esc(b.name)}`,'check');render()},
