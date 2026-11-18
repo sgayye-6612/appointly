@@ -233,6 +233,4 @@ appointly/
 - [ ] Online payments and WhatsApp reminders
 - [ ] Database migrations with Alembic
 
----
 
-Made with 🧡 by **REDDY**
